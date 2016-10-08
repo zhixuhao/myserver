@@ -1,0 +1,17 @@
+{
+  "name": "web",
+  "homepage": "https://github.com/zhixuhao/Personal-webPage",
+  "description": "",
+  "main": "",
+  "authors": [
+    "zhixuhao"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.1.1",
+    "angular": "^1.5.8",
+    "font-awesome": "font-awsome#^4.6.3",
+    "codrops/BookBlock": "BookBlock#*"
+  }
+}

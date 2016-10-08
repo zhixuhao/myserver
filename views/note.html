@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>智绪浩的个人主页</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="/css/style.css">
+		<link rel="stylesheet" type="text/css" href="/vender/font-awesome/css/font-awesome.css">
+		<link rel="stylesheet" type="text/css" href="/css/progressjs.css">
+		<script src="/vender/jquery/dist/jquery.js"></script>
+		<script src="/js/turn.js"></script>
+		<script src="/js/progress.js"></script>
+	</head>
+	<body>
+	<div id="porgress"></div>
+	<script>
+		progressJs("#porgress").start();
+	</script>
+
+		<div class="left-panel">
+			<div class="self_intro">
+				<div class="img_holder">
+					<img src="/image/lufei1.jpg">
+				</div>
+				<div class="title">
+					<p>
+						智绪浩的网站
+					</p>
+					<p>
+						George's website
+					</p>
+				</div>
+				<div class="icons">
+					<i class="fa fa-envelope-o" aria-hidden="true"></i>
+					<i class="fa fa-weixin" aria-hidden="true"></i>
+					<i class="fa fa-weixin" aria-hidden="true"></i>
+					<i class="fa fa-weixin" aria-hidden="true"></i>
+					<i class="fa fa-weixin" aria-hidden="true"></i>
+					<i class="fa fa-weixin" aria-hidden="true"></i>
+				</div>
+				<div class="intro_text">
+					<p>
+						我今年23岁,热爱前端,希望自己的作品能被更多人看到,深知自己的不足,所以渴求新的知识,盼望与牛逼的人做牛逼的事! best wishes!
+					</p>
+				</div>
+			</div>
+			<div class="recent_work">
+
+			</div>
+			<div class="news">
+
+			</div>
+		</div>
+	<script>
+		progressJs("#porgress").set(50);
+	</script>
+		<div class="right-panel">
+			<div class="noteBook">
+				<section class="title">
+					<p>智绪浩的学习笔记</p>
+				</section>
+				<div class="book-wrapper" id="book-wrapper">
+					<div class="nav" id="book-pre">
+						<img src="image/buttons-left.png">
+					</div>
+					<div id="bb-bookblock" class="bb-bookblock">
+						<div class="bb-item">
+							<div class="item-in">
+								<p>page 1</p>
+							</div>
+						</div>
+						<div class="bb-item nodisplay">
+							<div class="item-in">
+								<p>page 2</p>
+							</div>
+						</div>
+						<div class="bb-item nodisplay">
+							<div class="item-in">
+								<p>page 3</p>
+							</div>
+						</div>
+					</div>
+					<div class="nav" id="book-next">
+						<img src="image/buttons-right.png">
+					</div>
+				</div>
+			</div>
+			<div class="myNote">
+				<div class="addNote" id="addNote">
+					<div class="icon">
+						<a onclick="addnote(this)"><i class="fa fa-plus" aria-hidden="true"></i></a>
+					</div>
+					<form id="add-Note">
+						<div class="adiv-title">
+							<input class="input-title" placeholder="请输入标题">
+						</div>
+						<div class="adiv-content">
+							<textarea placeholder="请输入内容"></textarea>
+						</div>
+						<div class="adiv-button">
+							<button type="button">提交</button>
+						</div>
+					</form>
+				</div>
+				<p class="title">学习笔记</p>
+				<div class="article-wrapper" id="article-wrapper">
+					<article class="note-detail">
+						<p class="article-title">
+							{{title}}
+						</p>
+						<p class="footer">
+							<span>发布于{{published}}</span>
+							<span>标签</span>
+							<span>收藏</span>
+						</p>
+						<p class="content">
+							 {{body}}
+						</p>
+					</article>
+				</div>
+			</div>
+		</div>
+	<script>
+		setTimeout(function(){
+			progressJs("#porgress").end();
+		},200);
+		function addnote(obj){
+			var div = $(obj).parent().parent();
+			if(div.hasClass('active')){
+				div.removeClass('active');
+				return;
+			}
+			else{
+				div.addClass('active');
+			}
+		}
+	</script>
+	</body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "name": "codrops/BookBlock",
+  "description": "A jQuery plugin that will create a booklet-like component that let's you navigate through its items by flipping the pages.",
+  "license": "http://tympanus.net/codrops/licensing/",
+  "dependencies": {
+    "modernizr": "2.6.2",
+    "jquerypp": "1.0.1"
+  },
+  "homepage": "https://github.com/codrops/BookBlock",
+  "_release": "3fcee0a705",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "3fcee0a705a1bd59c89ae4ff543cb2e4e7d24330"
+  },
+  "_source": "https://github.com/codrops/BookBlock.git",
+  "_target": "*",
+  "_originalSource": "BookBlock",
+  "_direct": true
+}

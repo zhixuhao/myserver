@@ -1,0 +1,207 @@
+@font-face {
+  font-family: 'opensans-light';
+  src: url("../font/OpenSans-Light.eot");
+  /* IE9*/
+  src: url("../font/OpenSans-Light.eot?#iefix") format("embedded-opentype"), url("../font/OpenSans-Light.woff") format("woff"), url("../font/OpenSans-Light.ttf") format("truetype"), url("../font/OpenSans-Light.svg") format("svg");
+  /* iOS 4.1- */
+  font-weight: lighter; }
+@font-face {
+  font-family: 'opensans-regular';
+  src: url("../font/OpenSans-Regular.eot");
+  /* IE9*/
+  src: url("../font/OpenSans-Regular.eot?#iefix") format("embedded-opentype"), url("../font/OpenSans-Regular.woff") format("woff"), url("../font/OpenSans-Regular.ttf") format("truetype"), url("../font/OpenSans-Regular.svg") format("svg");
+  /* iOS 4.1- */
+  font-weight: normal; }
+html {
+  font-size: 58%;
+  height: 100%; }
+  html body {
+    margin: 0;
+    height: 100%; }
+    html body p {
+      margin: 0 5px; }
+    html body .left-panel {
+      width: 33.3%;
+      height: 100%;
+      position: fixed;
+      background-image: url("../image/left_bg1.jpg");
+      background-size: cover;
+      background-repeat: no-repeat; }
+      html body .left-panel div {
+        margin-top: 10px; }
+      html body .left-panel .self_intro {
+        padding-top: 50px;
+        color: white; }
+        html body .left-panel .self_intro .img_holder {
+          text-align: center; }
+          html body .left-panel .self_intro .img_holder img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 2px solid #e6e6e6; }
+        html body .left-panel .self_intro .title {
+          text-align: center;
+          font-family: "opensans-regular";
+          font-size: 1.8rem; }
+        html body .left-panel .self_intro .icons {
+          text-align: center; }
+          html body .left-panel .self_intro .icons i {
+            font-size: 10px;
+            color: white;
+            padding: 3px;
+            border: 1px solid white;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            margin: 0 3px; }
+        html body .left-panel .self_intro .intro_text {
+          text-align: center;
+          font-family: opensans-light;
+          font-size: 1.5rem; }
+          html body .left-panel .self_intro .intro_text p {
+            width: 70%;
+            margin: 0 auto;
+            text-align: left; }
+    html body .right-panel {
+      margin-left: 33.3%;
+      width: 66.6%;
+      height: 100%;
+      margin-top: 0 !important; }
+      html body .right-panel .noteBook {
+        background-image: url("../image/wood.jpg");
+        height: 100%;
+        margin-top: 0 !important;
+        position: relative;
+        display: none; }
+        html body .right-panel .noteBook .title {
+          font-family: opensans-regular;
+          font-size: 3.5em;
+          position: absolute;
+          top: 8%;
+          left: 8%; }
+        html body .right-panel .noteBook .book-wrapper {
+          position: absolute;
+          top: 20%;
+          width: 100%;
+          height: 70%;
+          display: flex;
+          justify-content: center;
+          align-items: center; }
+          html body .right-panel .noteBook .book-wrapper .bb-bookblock {
+            width: 65%;
+            height: 80%;
+            margin: 0 15px; }
+            html body .right-panel .noteBook .book-wrapper .bb-bookblock .bb-item {
+              height: 100%;
+              width: 100%;
+              background-image: url("../image/book.png");
+              background-size: cover;
+              align-items: center;
+              justify-content: center;
+              background-color: transparent; }
+      html body .right-panel .myNote {
+        padding: 3em;
+        width: 100%;
+        background-color: #fafbff;
+        min-height: 100%; }
+        html body .right-panel .myNote .addNote {
+          width: 25%;
+          position: fixed;
+          top: 0;
+          padding-top: 20px;
+          right: -22%;
+          -webkit-transition: all .5s ease-in;
+          -moz-transition: all .5s ease-in;
+          transition: all .5s ease-in;
+          z-index: 1000; }
+          html body .right-panel .myNote .addNote.active {
+            right: 10px; }
+            html body .right-panel .myNote .addNote.active .icon i {
+              transform: rotate(45deg); }
+          html body .right-panel .myNote .addNote .icon {
+            position: absolute;
+            top: 22px;
+            left: 0;
+            cursor: pointer; }
+            html body .right-panel .myNote .addNote .icon i {
+              font-size: 2em;
+              background-color: #aaa;
+              border-radius: 50%;
+              padding: 4px 4px 2px 4px;
+              color: white;
+              transition: all .5s ease-in-out; }
+          html body .right-panel .myNote .addNote form {
+            width: 90%;
+            margin-left: 15%;
+            font-family: opensans-light;
+            font-size: 1.5rem; }
+            html body .right-panel .myNote .addNote form div {
+              width: 80%;
+              margin-bottom: 1em; }
+            html body .right-panel .myNote .addNote form .adiv-title {
+              height: 2em; }
+              html body .right-panel .myNote .addNote form .adiv-title input {
+                height: 100%;
+                border: none;
+                background: transparent;
+                font-size: 1.25em;
+                font-family: opensans-light; }
+                html body .right-panel .myNote .addNote form .adiv-title input:focus {
+                  outline: none; }
+            html body .right-panel .myNote .addNote form .adiv-content textarea {
+              height: 150px;
+              resize: vertical;
+              border: 1px solid #e6e6e6;
+              border-radius: 2px;
+              font-size: 1.1em;
+              font-family: opensans-light;
+              width: 97%; }
+            html body .right-panel .myNote .addNote form .adiv-button button {
+              width: 100%;
+              height: 33px;
+              background: #50abcd;
+              border: 1px solid #e6e6e6;
+              border-radius: 3px;
+              font-size: 1em;
+              font-family: opensans-light;
+              color: white; }
+        html body .right-panel .myNote p.title {
+          font-family: opensans-light;
+          font-size: 3rem;
+          text-align: center;
+          margin: 0 auto; }
+        html body .right-panel .myNote .article-wrapper {
+          transition: all .5s ease-in-out;
+          opacity: 1; }
+          html body .right-panel .myNote .article-wrapper article.note {
+            width: 90%;
+            margin: 1.5em;
+            font-size: 1.8rem;
+            opacity: 0.65;
+            transition: ease 0.3s;
+            margin-bottom: 2.5rem;
+            cursor: pointer; }
+            html body .right-panel .myNote .article-wrapper article.note:hover {
+              opacity: 1; }
+          html body .right-panel .myNote .article-wrapper article.note-detail {
+            width: 90%;
+            margin: 1.5em;
+            font-size: 2rem; }
+          html body .right-panel .myNote .article-wrapper article.note p.article-title, html body .right-panel .myNote .article-wrapper article.note-detail p.article-title {
+            font-family: opensans-light;
+            font-size: 1.5em;
+            color: #333;
+            margin-bottom: 0.5em; }
+          html body .right-panel .myNote .article-wrapper article.note p.content, html body .right-panel .myNote .article-wrapper article.note-detail p.content {
+            font-family: opensans-light;
+            font-size: 1em;
+            color: #555;
+            margin-bottom: 1em; }
+          html body .right-panel .myNote .article-wrapper article.note p.footer, html body .right-panel .myNote .article-wrapper article.note-detail p.footer {
+            font-family: opensans-light;
+            font-size: 0.8em;
+            color: #888; }
+  html .nodisplay {
+    display: none; }
+
+/*# sourceMappingURL=style.css.map */
