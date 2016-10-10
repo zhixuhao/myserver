@@ -18,7 +18,8 @@ app.use(bodyParser.json()); // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 
 app.get('/', function(req, res) {
-   res.render(__dirname+'/public/index',{title:""});
+	console.log("index");
+   res.render(__dirname+'/public/index1',{title:"最近文章"});
 });
 
 app.get('/detail/:id', function(req, res){
