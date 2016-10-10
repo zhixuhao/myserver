@@ -7,7 +7,7 @@ var bodyParser = require('body-parser');
 var multer = require('multer'); // v1.0.5
 var upload = multer(); // for parsing multipart/form-data
 var hbs = require('hbs');
-
+var markdown = require('markdown-js');
 // 指定模板文件的后缀名为html
 app.set('view engine', 'html');
 
@@ -19,7 +19,7 @@ app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x
 
 app.get('/', function(req, res) {
 	console.log("index");
-   res.render(__dirname+'/public/index1',{title:"最近文章"});
+    res.render(__dirname+'/public/index',{title:"最近文章"});
 });
 
 app.get('/detail/:id', function(req, res){
@@ -36,4 +36,9 @@ app.post('/customer', upload.array(),function(req, res){
   	console.log(data);
     res.json(data);
   });
+app.get('/markdown', function(req, res) {
+	var html = markdown.makeHtml("[Java Eye](http://www.iteye.com/ \"Click\") ");
+	res.send(html);
+	res.end();
+});
 app.listen(3000);
