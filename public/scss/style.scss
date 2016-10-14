@@ -26,6 +26,9 @@ html{
   body{
     margin: 0;
     height: 100%;
+    div{
+      box-sizing: border-box;
+    }
     p{
       margin: 0 5px;
     }
@@ -33,7 +36,7 @@ html{
       width: 33.3%;
       height: 100%;
       position: fixed;
-      background-image: url("../image/left_bg1.jpg");
+      background-image: url("/image/left_bg1.jpg");
       background-size: cover;
       background-repeat: no-repeat;
       div{
@@ -129,11 +132,11 @@ html{
         background-color: $bg-color;
         min-height: 100%;
         .addNote{
-          width: 25%;
+          width: 45%;
           position: fixed;
           top:0;
           padding-top: 20px;
-          right:-22%;
+          right:-42%;
           -webkit-transition: all .5s ease-in;
           -moz-transition: all .5s ease-in;
           transition: all .5s ease-in;
@@ -166,8 +169,13 @@ html{
             margin-left: 15%;
             font-family: opensans-light;
             font-size: 1.5rem;
-            div{
-              width: 80%;
+            background-color: $bg-color;
+            .simditor-body{
+              max-height:300px;
+              overflow: auto;
+            }
+            >div{
+              width: 95%;
               margin-bottom: 1em;
             }
             .adiv-title{
@@ -197,6 +205,7 @@ html{
             }
             .adiv-button{
               button{
+                cursor: pointer;
                 width: 100%;
                 height: 33px;
                 background: #50abcd;
