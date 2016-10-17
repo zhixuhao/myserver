@@ -36,7 +36,7 @@ html{
       width: 33.3%;
       height: 100%;
       position: fixed;
-      background-image: url("/image/left_bg1.jpg");
+      background-image: url("../image/left_bg1.jpg");
       background-size: cover;
       background-repeat: no-repeat;
       div{
@@ -178,10 +178,11 @@ html{
               width: 95%;
               margin-bottom: 1em;
             }
-            .adiv-title{
+            .adiv-title,.adiv-describe{
               height:2em;
               input{
                 height: 100%;
+                width: 95%;
                 border:none;
                 background: transparent;
                 font-size: 1.25em;
@@ -189,6 +190,9 @@ html{
                 &:focus{
                   outline: none;
                 }
+              }
+              input.input-describe{
+                font-size: 1em;
               }
             }
             .adiv-content{

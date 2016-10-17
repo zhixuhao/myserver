@@ -6,14 +6,14 @@
 		<link rel="stylesheet" href="/css/style.css">
 		<link rel="stylesheet" type="text/css" href="/vender/font-awesome/css/font-awesome.css">
 		<link rel="stylesheet" type="text/css" href="/css/progressjs.css">
-		<link rel="stylesheet" type="text/css" href="/vender/simditor/simditor.css" />
-		<script src="/vender/jquery/dist/jquery.js"></script>
-		<script src="/js/turn.js"></script>
-		<script src="/js/progress.js"></script>
-		<script type="text/javascript" src="/vender/simditor/module.js"></script>
-		<script type="text/javascript" src="/vender/simditor/hotkeys.js"></script>
-		<script type="text/javascript" src="/vender/simditor/uploader.js"></script>
-		<script type="text/javascript" src="/vender/simditor/simditor.js"></script>
+		<link rel="stylesheet" type="text/css" href="vender/simditor/simditor.css" />
+		<script src="vender/jquery/dist/jquery.js"></script>
+		<script src="js/turn.js"></script>
+		<script src="js/progress.js"></script>
+		<script type="text/javascript" src="vender/simditor/module.js"></script>
+		<script type="text/javascript" src="vender/simditor/hotkeys.js"></script>
+		<script type="text/javascript" src="vender/simditor/uploader.js"></script>
+		<script type="text/javascript" src="vender/simditor/simditor.js"></script>
 	</head>
 	<body>
 	<div id="porgress"></div>
@@ -24,7 +24,7 @@
 		<div class="left-panel">
 			<div class="self_intro">
 				<div class="img_holder">
-					<img src="/image/lufei1.jpg">
+					<img src="image/lufei1.jpg">
 				</div>
 				<div class="title">
 					<p>
@@ -59,36 +59,6 @@
 		progressJs("#porgress").set(50);
 	</script>
 		<div class="right-panel">
-			<div class="noteBook">
-				<section class="title">
-					<p>智绪浩的学习笔记</p>
-				</section>
-				<div class="book-wrapper" id="book-wrapper">
-					<div class="nav" id="book-pre">
-						<img src="image/buttons-left.png">
-					</div>
-					<div id="bb-bookblock" class="bb-bookblock">
-						<div class="bb-item">
-							<div class="item-in">
-								<p>page 1</p>
-							</div>
-						</div>
-						<div class="bb-item nodisplay">
-							<div class="item-in">
-								<p>page 2</p>
-							</div>
-						</div>
-						<div class="bb-item nodisplay">
-							<div class="item-in">
-								<p>page 3</p>
-							</div>
-						</div>
-					</div>
-					<div class="nav" id="book-next">
-						<img src="image/buttons-right.png">
-					</div>
-				</div>
-			</div>
 			<div class="myNote">
 				<div class="addNote" id="addNote">
 					<div class="icon">
@@ -97,6 +67,9 @@
 					<form id="add-Note">
 						<div class="adiv-title">
 							<input class="input-title" placeholder="请输入标题">
+						</div>
+						<div class="adiv-describe">
+							<input class="input-describe" placeholder="请输入描述">
 						</div>
 						<div class="adiv-content">
 							<textarea id="simditor_area" placeholder="请输入内容"></textarea>
@@ -252,11 +225,13 @@
 		function post_note(){
 			var url = '/addnote';
 			var title = $("input.input-title").eq(0);
+			var describe = $("input.input-describe").eq(0);
 			var content = $(".simditor-body").eq(0);
 			var postdata = {
 				time:Date.now(),
 				title:title.val().toString(),
-				content:content.val().toString()
+				describe:describe.val().toString(),
+				content:content.html().toString()
 			};
 			$.ajax({
 				contentType:'application/json;charset=UTF-8',
@@ -266,6 +241,7 @@
 				data:JSON.stringify(postdata),
 				success: function(data){
 					title.val("");
+					describe.val("");
 					content.html("");
 					$("#addNote").removeClass("active");
 					alert("上传成功");

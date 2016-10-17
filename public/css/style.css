@@ -26,7 +26,7 @@ html {
       width: 33.3%;
       height: 100%;
       position: fixed;
-      background-image: url("/image/left_bg1.jpg");
+      background-image: url("../image/left_bg1.jpg");
       background-size: cover;
       background-repeat: no-repeat; }
       html body .left-panel div {
@@ -144,16 +144,19 @@ html {
             html body .right-panel .myNote .addNote form > div {
               width: 95%;
               margin-bottom: 1em; }
-            html body .right-panel .myNote .addNote form .adiv-title {
+            html body .right-panel .myNote .addNote form .adiv-title, html body .right-panel .myNote .addNote form .adiv-describe {
               height: 2em; }
-              html body .right-panel .myNote .addNote form .adiv-title input {
+              html body .right-panel .myNote .addNote form .adiv-title input, html body .right-panel .myNote .addNote form .adiv-describe input {
                 height: 100%;
+                width: 95%;
                 border: none;
                 background: transparent;
                 font-size: 1.25em;
                 font-family: opensans-light; }
-                html body .right-panel .myNote .addNote form .adiv-title input:focus {
+                html body .right-panel .myNote .addNote form .adiv-title input:focus, html body .right-panel .myNote .addNote form .adiv-describe input:focus {
                   outline: none; }
+              html body .right-panel .myNote .addNote form .adiv-title input.input-describe, html body .right-panel .myNote .addNote form .adiv-describe input.input-describe {
+                font-size: 1em; }
             html body .right-panel .myNote .addNote form .adiv-content textarea {
               height: 150px;
               resize: vertical;
