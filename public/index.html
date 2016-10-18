@@ -155,6 +155,7 @@
 		},200);
 	</script>
 	<script>
+		var type ="{{title}}";
 		function addnote(obj){
 			var div = $(obj).parent().parent();
 			if(div.hasClass('active')){
@@ -213,7 +214,7 @@
 				imageButton: "upload",
 				pasteImage: true,
 				upload: {
-					url: location.origin + "/noteimg/upload",
+					url: location.origin + "/noteimg/upload/",
 					formData : {
 						"childPath" : "picture"
 					},
@@ -221,9 +222,18 @@
 					leaveConfirm: "上传正在进行，您确定要离开本页面？"
 				}
 			});
+			$.ajax({
+				contentType:'application/json;charset=UTF-8',
+				type: "POST",
+				url: location.origin+'/'+type+'/',
+				dataType: "json",
+				success:function(data){
+					console.log(data);
+				}
+			});
 		});
 		function post_note(){
-			var url = '/addnote';
+			var url = '/addnote/';
 			var title = $("input.input-title").eq(0);
 			var describe = $("input.input-describe").eq(0);
 			var content = $(".simditor-body").eq(0);

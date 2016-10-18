@@ -1,0 +1,1 @@
+{"time":1476707727098,"title":"css 优先程度","describe":"","content":"<p><span style=\"font-size: 14px;\">选择器中id数目（可以大于1）&gt;属性值（class也是属性）和伪类数目（比如:hover）&gt;元素名和伪元素（before,after）数目</span><br></p>"}

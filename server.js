@@ -1,6 +1,6 @@
 var express = require('express');
 var app = express();
-//app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/public'));
 //var routes = require('./routes/zhi.js')(app);
 var blogEngine = require('./jsondata/data');
 var bodyParser = require('body-parser');
@@ -35,9 +35,28 @@ app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x
 
 app.get('/', function(req, res) {
 	console.log("index");
-    res.render(__dirname+'/public/index',{title:"最近文章"});
+    res.render(__dirname+'/public/index',{title:"allnotes"});
 });
-
+app.post('/allnotes',function(req,res){
+	console.log('all notes');
+	var allFile = new Array();
+	var items = fs.readdirSync('jsondata');
+	console.log(items);
+	for(var i = 0; i < items.length;i++){
+		var filename = items[i];
+		if(filename.length > 4){
+			var postfix = filename.substring(filename.length-4,filename.length);
+			if(postfix == "json"){
+				console.log(filename);
+				var data = fs.readFileSync('jsondata/'+filename,'utf-8');
+				console.log(data);
+				allFile.push(JSON.parse(data));
+			}
+		}
+	}
+	res.send(allFile);
+	res.end();
+});
 app.get('/detail/:id', function(req, res){
   	var data = blogEngine.getBlogEntry(req.params.id);
   	//res.sendFile(path.join(__dirname, '../public', 'index2.html'));
@@ -64,9 +83,9 @@ app.post('/addnote',function(req,res){
 	var postdata = req.body;
 	console.log(postdata);
 	var configTxt = JSON.stringify(postdata);
-	var title = postdata.title+postdata.time;
+	var title = postdata.time+postdata.title;
 	var options = {encoding:'utf8', flag:'w'};
-	fs.writeFile('jsondata/'+title+'.txt', configTxt, options, function(err){
+	fs.writeFile('jsondata/'+title+'.json', configTxt, options, function(err){
 		if (err){
 			console.log("Config Write Failed.");
 		} else {
