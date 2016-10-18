@@ -1,6 +1,6 @@
 var express = require('express');
 var app = express();
-app.use(express.static(__dirname + '/public'));
+//app.use(express.static(__dirname + '/public'));
 //var routes = require('./routes/zhi.js')(app);
 var blogEngine = require('./jsondata/data');
 var bodyParser = require('body-parser');
