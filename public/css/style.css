@@ -165,6 +165,32 @@ html {
               font-size: 1.1em;
               font-family: opensans-light;
               width: 97%; }
+            html body .right-panel .myNote .addNote form .adiv-class {
+              height: 2em;
+              width: 100%;
+              display: flex; }
+              html body .right-panel .myNote .addNote form .adiv-class label {
+                cursor: pointer;
+                display: flex;
+                justify-content: center;
+                align-items: center; }
+                html body .right-panel .myNote .addNote form .adiv-class label input {
+                  width: 14px;
+                  height: 14px;
+                  -webkit-appearance: none;
+                  -moz-appearance: none;
+                  border: 1px solid #50abcd;
+                  border-radius: 3px;
+                  transition: all .2s ease;
+                  outline: none;
+                  opacity: 0.8; }
+                  html body .right-panel .myNote .addNote form .adiv-class label input:checked {
+                    background: #50abcd;
+                    padding: 3px;
+                    background-clip: content-box; }
+                html body .right-panel .myNote .addNote form .adiv-class label span {
+                  margin-left: 0.5em;
+                  margin-right: 1em; }
             html body .right-panel .myNote .addNote form .adiv-button button {
               cursor: pointer;
               width: 100%;
@@ -179,7 +205,13 @@ html {
           font-family: opensans-light;
           font-size: 3rem;
           text-align: center;
-          margin: 0 auto; }
+          margin: 0 auto;
+          cursor: pointer;
+          transition: all .2s ease;
+          height: 3rem;
+          width: 14rem; }
+          html body .right-panel .myNote p.title:hover {
+            font-size: 3.5em; }
         html body .right-panel .myNote .article-wrapper {
           transition: all .5s ease-in-out;
           opacity: 1; }
@@ -189,8 +221,9 @@ html {
             font-size: 1.8rem;
             opacity: 0.65;
             transition: ease 0.3s;
-            margin-bottom: 2.5rem;
-            cursor: pointer; }
+            margin-bottom: 2.5rem; }
+            html body .right-panel .myNote .article-wrapper article.note .article-title {
+              cursor: pointer; }
             html body .right-panel .myNote .article-wrapper article.note:hover {
               opacity: 1; }
           html body .right-panel .myNote .article-wrapper article.note-detail {
@@ -207,10 +240,18 @@ html {
             font-size: 1em;
             color: #555;
             margin-bottom: 1em; }
+            html body .right-panel .myNote .article-wrapper article.note p.content img, html body .right-panel .myNote .article-wrapper article.note-detail p.content img {
+              max-width: 90%;
+              width: initial;
+              height: initial; }
           html body .right-panel .myNote .article-wrapper article.note p.footer, html body .right-panel .myNote .article-wrapper article.note-detail p.footer {
             font-family: opensans-light;
             font-size: 0.8em;
             color: #888; }
+            html body .right-panel .myNote .article-wrapper article.note p.footer span, html body .right-panel .myNote .article-wrapper article.note-detail p.footer span {
+              margin-right: 1em; }
+            html body .right-panel .myNote .article-wrapper article.note p.footer .classSpan, html body .right-panel .myNote .article-wrapper article.note p.footer .alterSpan, html body .right-panel .myNote .article-wrapper article.note p.footer .deleteSpan, html body .right-panel .myNote .article-wrapper article.note-detail p.footer .classSpan, html body .right-panel .myNote .article-wrapper article.note-detail p.footer .alterSpan, html body .right-panel .myNote .article-wrapper article.note-detail p.footer .deleteSpan {
+              cursor: pointer; }
   html .nodisplay {
     display: none; }
 

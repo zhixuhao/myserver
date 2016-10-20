@@ -17,9 +17,6 @@
 	</head>
 	<body>
 	<div id="porgress"></div>
-	<script>
-		progressJs("#porgress").start();
-	</script>
 
 		<div class="left-panel">
 			<div class="self_intro">
@@ -55,9 +52,6 @@
 
 			</div>
 		</div>
-	<script>
-		progressJs("#porgress").set(50);
-	</script>
 		<div class="right-panel">
 			<div class="myNote">
 				<div class="addNote" id="addNote">
@@ -74,14 +68,19 @@
 						<div class="adiv-content">
 							<textarea id="simditor_area" placeholder="请输入内容"></textarea>
 						</div>
+						<div class="adiv-class">
+							<label><input type="radio" name="note-class" checked value="knowledge"><span>知识点</span></label>
+							<label><input type="radio" name="note-class" value="fromWork"><span>工作</span></label>
+							<label><input type="radio" name="note-class" value="collection"><span>整理</span></label>
+						</div>
 						<div class="adiv-button">
-							<button type="button" onclick="post_note()">提交</button>
+							<button type="button" id="post_button" onclick="post_note()">提交</button>
 						</div>
 					</form>
 				</div>
-				<p class="title">学习笔记</p>
+				<p class="title" onclick="getAllNotes()">学习笔记</p>
 				<div class="article-wrapper" id="article-wrapper">
-					<article class="note" data-target="/detail/1">
+				<!--	<article class="note" data-target="/detail/1">
 						<p class="article-title">
 							accesskey 用法
 						</p>
@@ -146,16 +145,17 @@
 							<span>收藏</span>
 						</p>
 					</article>
+					-->
 				</div>
 			</div>
 		</div>
 	<script>
-		setTimeout(function(){
-			progressJs("#porgress").end();
-		},200);
+
 	</script>
 	<script>
 		var type ="{{title}}";
+
+
 		function addnote(obj){
 			var div = $(obj).parent().parent();
 			if(div.hasClass('active')){
@@ -166,48 +166,60 @@
 				div.addClass('active');
 			}
 		}
-		function getNoteDetail(url){
-			var postdata = {
 
+
+		function getNoteDetail(filename,func){
+			var postdata = {
+				filename:filename
 			};
 			$.ajax({
 				contentType:'application/json;charset=UTF-8',
-				type: "GET",
-				url: location.origin+url,
+				type: "POST",
+				url: location.origin+"/noteDetail/",
 				dataType: "json",
 				data:JSON.stringify(postdata),
 				success: function(data){
-					progressJs("#porgress").start();
-					$("#article-wrapper").css("opacity",0);
-					progressJs("#porgress").set(50);
-					var $title = $("<p>").addClass("article-title");
-					$title.html(data.title);
-					var $time = $("<span>").html("发布于"+data.published);
-					var $tag = $("<span>").html('标签');
-					var $collect = $("<span>").html('收藏');
-					var $footer = $("<p>").addClass("footer");
-					$footer.append($time,$tag,$collect);
-					var $content = $("<p>").addClass("content").html(data.body);
-					var $article = $("<article>").addClass("note-detail").append($title,$footer,$content);
-					setTimeout(function(){
-						$("#article-wrapper").empty();
-						$("#article-wrapper").append($article);
-						$("#article-wrapper").css("opacity",1);
-						progressJs("#porgress").end();
-					},500);
-
+					func(data,filename);
 				}
 			});
 
 		}
-		$(document).ready(function(){
-			$("article.note").each(function(){
-				var url = $(this).attr("data-target");
-				$(this).bind("click",function(){
-					//getNoteDetail(url);
-					window.location = location.origin+url;
-				});
+
+
+		function showNoteDetail(data,filename){
+			progressJs("#porgress").start();
+			$("#article-wrapper").css("opacity",0);
+			progressJs("#porgress").set(50);
+			var $title = $("<p>").addClass("article-title");
+			$title.text(data.title);
+			var $time = $("<span>").html("发布于"+time_transfer(data.time));
+			var $tag = $("<span>").html(data.class);
+			var $alterspan = $("<span>").text("修改").addClass("alterSpan");
+			$alterspan.bind("click",function(){
+				alterNote($(this).parent().parent().attr("data-target"));
 			});
+			var $deletespan = $("<span>").text("删除").addClass("deleteSpan");
+			$deletespan.bind("click",function(){
+				deleteNote($(this).parent().parent().attr("data-target"));
+			});
+			var $footer = $("<p>").addClass("footer");
+			$footer.append($time,$tag,$alterspan,$deletespan);
+			var $content = $("<p>").addClass("content").html(data.content);
+			var $article = $("<article>").addClass("note-detail").addClass(data.class).append($title,$content,$footer).attr("data-target",filename);
+			setTimeout(function(){
+				$("#article-wrapper").empty();
+				$("#article-wrapper").append($article);
+				$("#article-wrapper").css("opacity",1);
+				progressJs("#porgress").end();
+			},500);
+		}
+
+		$(document).ready(function(){
+			initSimditor();
+			getAllNotes();
+		});
+
+		function initSimditor(){
 			var editor = new Simditor({
 				textarea: $("#simditor_area"),
 				toolbar: toolbar,
@@ -222,27 +234,116 @@
 					leaveConfirm: "上传正在进行，您确定要离开本页面？"
 				}
 			});
+		}
+
+
+		function getAllNotes(){
 			$.ajax({
 				contentType:'application/json;charset=UTF-8',
 				type: "POST",
 				url: location.origin+'/'+type+'/',
 				dataType: "json",
 				success:function(data){
+					data.sort(function(a,b){
+						if(a.time < b.time){
+							return 1;
+						}
+						else if(a.time > b.time){
+							return -1;
+						}
+						return 0;
+					});
 					console.log(data);
+					showNotes(data);
 				}
 			});
-		});
-		function post_note(){
+		}
+
+
+		function alterNote(filename){
+			$("#addNote").addClass("active");
+			$("#post_button").text("保存修改");
+			var showAlterEditor = function(data,filename){
+				var title = $("input.input-title").eq(0);
+				var describe = $("input.input-describe").eq(0);
+				var content = $(".simditor-body").eq(0);
+				var placeholder = $(".simditor-placeholder").eq(0);
+				title.val(data.title);
+				describe.val(data.describe);
+				placeholder.empty();
+				content.html(data.content);
+				$("input[value="+data.class+"]").prop("checked",true);
+			};
+			getNoteDetail(filename,showAlterEditor);
+			$("#post_button")[0].onclick = function(){
+				post_note(true,filename);
+			};
+		}
+
+
+		function deleteNote(filename){
+			var postdata =  new Object();
+			postdata.filename = filename;
+			$.ajax({
+				contentType:'application/json;charset=UTF-8',
+				type: "POST",
+				url: location.origin+'/deleteNote/',
+				dataType: "json",
+				data:JSON.stringify(postdata),
+				success:function(data){
+					alert("删除成功");
+					getAllNotes();
+				}
+			});
+		}
+
+		//所有笔记
+		function showNotes(data){
+			var $articleWrapper = $("#article-wrapper");
+			progressJs("#porgress").start();
+			$articleWrapper.css("opacity",0);
+			setTimeout(function(){
+				$articleWrapper.empty();
+				for(var i = 0; i < data.length; i++){
+					var $article = $("<article>").addClass("note").addClass(data[i].class).attr("data-target",data[i].time.toString()+"_"+data[i].class.toString());
+					var $atitle = $("<p>").addClass("article-title").text(data[i].title.toString());
+					var $acontent = $("<p>").addClass("content").text(data[i].describe.toString());
+					var $afooter = $("<p>").addClass("footer");
+					var $timespan = $("<span>").text("发布于 "+time_transfer(data[i].time));
+					var $classspan = $("<span>").addClass("classSpan").text(data[i].class);
+					var $alterspan = $("<span>").addClass("alterSpan").text("修改");
+					$alterspan.bind("click",function(){
+						alterNote($(this).parent().parent().attr("data-target"),"all");
+					});
+					var $deletespan = $("<span>").text("删除").addClass("deleteSpan");
+					$deletespan.bind("click",function(){
+						deleteNote($(this).parent().parent().attr("data-target"),"all");
+					});
+					$afooter.append($timespan).append($classspan).append($alterspan).append($deletespan);
+					$article.append($atitle).append($acontent).append($afooter);
+					var arg = data[i].time.toString()+"_"+data[i].class.toString();
+					$atitle.bind("click",function(){
+						getNoteDetail($(this).parent().attr("data-target"),showNoteDetail);
+					});
+					$articleWrapper.append($article);
+				}
+				$articleWrapper.css("opacity",1);
+				progressJs("#porgress").end();
+			},500);
+		}
+
+
+		//提交笔记
+		function post_note(isAlter,filename,arg){
 			var url = '/addnote/';
 			var title = $("input.input-title").eq(0);
 			var describe = $("input.input-describe").eq(0);
 			var content = $(".simditor-body").eq(0);
-			var postdata = {
-				time:Date.now(),
-				title:title.val().toString(),
-				describe:describe.val().toString(),
-				content:content.html().toString()
-			};
+			var postdata = getNoteData(title,describe,content);
+			if(isAlter){
+				url = '/alternote/';
+				postdata.orifilename = filename;
+			}
 			$.ajax({
 				contentType:'application/json;charset=UTF-8',
 				type: "POST",
@@ -255,9 +356,35 @@
 					content.html("");
 					$("#addNote").removeClass("active");
 					alert("上传成功");
-
+					$("#post_button")[0].onclick = function(){
+						post_note();
+					};
+					getAllNotes();
 				}
 			});
+		}
+
+		//得到笔记的信息
+		function getNoteData(title,describe,content){
+			var postdata = new Object();
+			var type = $("input[name='note-class']:checked").val();
+			postdata.time = Date.now();
+			postdata.title = title.val().toString();
+			postdata.describe = describe.val().toString();
+			postdata.content = content.html().toString();
+			postdata.class = type;
+			return postdata;
+		}
+
+		//转换时间
+		function time_transfer(t){
+			var date = new Date(t);
+			Y = date.getFullYear() + '-';
+			M = (date.getMonth()+1 < 10 ? '0'+(date.getMonth()+1) : date.getMonth()+1) + '-';
+			D = (date.getDate() < 10 ? '0'+(date.getDate()) : date.getDate()) + ' ';
+			h = (date.getHours() < 10 ? '0'+(date.getHours()) : date.getHours())+':';
+			m = (date.getMinutes() < 10 ? '0'+(date.getMinutes()) : date.getMinutes())+'';
+			return Y+M+D+h+m;
 		}
 	</script>
 	</body>

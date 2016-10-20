@@ -1,1 +1,0 @@
-{"time":1476707743417,"title":"颜色表示","describe":"","content":"<p><span style=\"font-size: 14px;\">颜色表示一般用十六进制，但是如果要表示更复杂的颜色，可以用rgb，rgba，其中的a代表透明度，0表示完全透明，1表示不透明。也可以用hsl和hsla模型来表示。透明度也可以单独用opacity表示，0全透明，1不透明。</span><br></p>"}

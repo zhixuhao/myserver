@@ -27,16 +27,18 @@ var upload = multer({
 // 指定模板文件的后缀名为html
 app.set('view engine', 'html');
 
-// 运行hbs模块
+// 运行hbs模块,模板引擎,用于渲染
 app.engine('html', hbs.__express);
 
-app.use(bodyParser.json()); // for parsing application/json
+app.use(bodyParser.json()); // for parsing application/json 用body-parsing中间件来使用req.body
 app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 
 app.get('/', function(req, res) {
 	console.log("index");
     res.render(__dirname+'/public/index',{title:"allnotes"});
 });
+
+
 app.post('/allnotes',function(req,res){
 	console.log('all notes');
 	var allFile = new Array();
@@ -57,6 +59,8 @@ app.post('/allnotes',function(req,res){
 	res.send(allFile);
 	res.end();
 });
+
+
 app.get('/detail/:id', function(req, res){
   	var data = blogEngine.getBlogEntry(req.params.id);
   	//res.sendFile(path.join(__dirname, '../public', 'index2.html'));
@@ -64,6 +68,8 @@ app.get('/detail/:id', function(req, res){
   	console.log(data);
     res.render('note',data);
   });
+
+
 app.post('/noteimg/upload', upload.single('file'),function(req, res){
 	console.log(req.file);
 	var file_path ="uploads/"+req.file.filename;
@@ -74,16 +80,20 @@ app.post('/noteimg/upload', upload.single('file'),function(req, res){
 	console.log(data);
 	res.send(data);
   });
+
+
 app.get('/markdown', function(req, res) {
 	var html = markdown.makeHtml("[Java Eye](http://www.iteye.com/ \"Click\") ");
 	res.send(html);
 	res.end();
 });
+
+
 app.post('/addnote',function(req,res){
 	var postdata = req.body;
 	console.log(postdata);
 	var configTxt = JSON.stringify(postdata);
-	var title = postdata.time+postdata.title;
+	var title = postdata.time+"_"+postdata.class;
 	var options = {encoding:'utf8', flag:'w'};
 	fs.writeFile('jsondata/'+title+'.json', configTxt, options, function(err){
 		if (err){
@@ -96,22 +106,48 @@ app.post('/addnote',function(req,res){
 	res.send(data);
 	res.end();
 });
-app.get('/writefile',function(req,res){
-	//写入文件
-	var config = {
-		maxFiles: 20,
-		maxConnections: 15,
-		rootPath: "/webroot"
-	};
-	var configTxt = JSON.stringify(config);
+
+
+app.post('/noteDetail',function(req,res){
+	var filename = req.body.filename + ".json";
+	fs.readFile('jsondata/'+filename,'utf-8',function(err,data){
+		console.log(data);
+		var jsondata = JSON.parse(data);
+		console.log(jsondata);
+		res.send(jsondata);
+		res.end();
+	});
+});
+
+
+app.post('/alternote',function(req,res){
+	var postdata = req.body;
+	var delfilename = postdata.orifilename + ".json";
+	fs.unlink('jsondata/'+delfilename);
+	console.log(postdata);
+	var configTxt = JSON.stringify(postdata);
+	var title = postdata.time+"_"+postdata.class;
 	var options = {encoding:'utf8', flag:'w'};
-	fs.writeFile('jsondata/config.txt', configTxt, options, function(err){
+	fs.writeFile('jsondata/'+title+'.json', configTxt, options, function(err){
 		if (err){
 			console.log("Config Write Failed.");
 		} else {
 			console.log("Config Saved.");
 		}
 	});
+	var data = {success:true};
+	res.send(data);
+	res.end();
 
+});
+
+
+app.post('/deleteNote',function(req,res){
+	var postdata = req.body;
+	var delfilename = postdata.filename + ".json";
+	fs.unlink('jsondata/'+delfilename);
+	var data = {success:true};
+	res.send(data);
+	res.end();
 });
 app.listen(3000);
