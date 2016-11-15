@@ -227,6 +227,7 @@
 		$(document).ready(function(){
 			initSimditor();
 			getAllNotes();
+			mobile_click();
 		});
 
 		function initSimditor(){
@@ -395,6 +396,16 @@
 			h = (date.getHours() < 10 ? '0'+(date.getHours()) : date.getHours())+':';
 			m = (date.getMinutes() < 10 ? '0'+(date.getMinutes()) : date.getMinutes())+'';
 			return Y+M+D+h+m;
+		}
+
+		//移动端点击事件
+		function mobile_click(){
+			$("p.title").bind("touchstart",function(){
+				$(this).addClass("active");
+			});
+			$("p.title").bind("touchend",function(){
+				$(this).removeClass("active");
+			});
 		}
 	</script>
 	</body>

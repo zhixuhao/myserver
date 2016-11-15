@@ -279,6 +279,12 @@ html {
   html body .right-panel {
     width: 100%;
     margin-left: 0; }
+    html body .right-panel .myNote p.title {
+      transition: none; }
+      html body .right-panel .myNote p.title:hover {
+        font-size: 3em; }
+      html body .right-panel .myNote p.title.active {
+        font-size: 3.5em; }
     html body .right-panel .myNote .addNote {
       width: 70%;
       right: -62%; }
@@ -316,6 +322,12 @@ html {
   html body .right-panel {
     width: 100%;
     margin-left: 0; }
+    html body .right-panel .myNote p.title {
+      transition: none; }
+      html body .right-panel .myNote p.title:hover {
+        font-size: 3em; }
+      html body .right-panel .myNote p.title.active {
+        font-size: 3.5em; }
     html body .right-panel .myNote .addNote {
       width: 70%;
       right: -63%; }

@@ -365,6 +365,15 @@ html{
         width: 100%;
         margin-left: 0;
         .myNote{
+          p.title{
+            transition: none;
+            &:hover{
+              font-size: 3em;
+            }
+            &.active{
+              font-size: 3.5em;
+            }
+          }
           .addNote{
             width: 70%;
             right:-62%;
@@ -420,6 +429,15 @@ html{
         width: 100%;
         margin-left: 0;
         .myNote{
+          p.title{
+            transition: none;
+            &:hover{
+              font-size: 3em;
+            }
+            &.active{
+              font-size: 3.5em;
+            }
+          }
           .addNote{
             width: 70%;
             right:-63%;
