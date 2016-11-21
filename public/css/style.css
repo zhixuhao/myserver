@@ -17,7 +17,9 @@ html {
   height: 100%; }
   html body {
     margin: 0;
-    height: 100%; }
+    height: 100%;
+    font-family: opensans-light;
+    box-sizing: content-box; }
     html body div {
       box-sizing: border-box; }
     html body p {
@@ -26,7 +28,7 @@ html {
       width: 33.3%;
       height: 100%;
       position: fixed;
-      background-image: url("../image/left_bg1.jpg");
+      background-image: url("../images/left_bg1.jpg");
       background-size: cover;
       background-repeat: no-repeat; }
       html body .left-panel div {
@@ -58,7 +60,6 @@ html {
             margin: 0 3px; }
         html body .left-panel .self_intro .intro_text {
           text-align: center;
-          font-family: opensans-light;
           font-size: 1.5rem; }
           html body .left-panel .self_intro .intro_text p {
             width: 70%;
@@ -68,9 +69,18 @@ html {
       margin-left: 33.3%;
       width: 66.6%;
       height: 100%;
-      margin-top: 0 !important; }
+      margin-top: 0 !important;
+      position: relative; }
+      html body .right-panel #upload-label {
+        position: absolute;
+        left: 15px;
+        bottom: 15px; }
+        html body .right-panel #upload-label span {
+          font-size: 16px;
+          background: #f1f1f1;
+          border-radius: 3px; }
       html body .right-panel .noteBook {
-        background-image: url("../image/wood.jpg");
+        background-image: url("../images/wood.jpg");
         height: 100%;
         margin-top: 0 !important;
         position: relative;
@@ -96,7 +106,7 @@ html {
             html body .right-panel .noteBook .book-wrapper .bb-bookblock .bb-item {
               height: 100%;
               width: 100%;
-              background-image: url("../image/book.png");
+              background-image: url("../images/book.png");
               background-size: cover;
               align-items: center;
               justify-content: center;
@@ -126,16 +136,18 @@ html {
             left: 0;
             cursor: pointer; }
             html body .right-panel .myNote .addNote .icon i {
-              font-size: 2em;
+              width: 2rem;
+              height: 2rem;
+              display: flex;
+              align-items: center;
+              justify-content: center;
               background-color: #aaa;
               border-radius: 50%;
-              padding: 4px 4px 2px 4px;
               color: white;
               transition: all .5s ease-in-out; }
           html body .right-panel .myNote .addNote form {
             width: 90%;
             margin-left: 15%;
-            font-family: opensans-light;
             font-size: 1.5rem;
             background-color: #fafbff; }
             html body .right-panel .myNote .addNote form .simditor-body {
@@ -151,8 +163,7 @@ html {
                 width: 95%;
                 border: none;
                 background: transparent;
-                font-size: 1.25em;
-                font-family: opensans-light; }
+                font-size: 1.25em; }
                 html body .right-panel .myNote .addNote form .adiv-title input:focus, html body .right-panel .myNote .addNote form .adiv-describe input:focus {
                   outline: none; }
               html body .right-panel .myNote .addNote form .adiv-title input.input-describe, html body .right-panel .myNote .addNote form .adiv-describe input.input-describe {
@@ -163,7 +174,6 @@ html {
               border: 1px solid #e6e6e6;
               border-radius: 2px;
               font-size: 1.1em;
-              font-family: opensans-light;
               width: 97%; }
             html body .right-panel .myNote .addNote form .adiv-class {
               height: 2em;
@@ -199,22 +209,32 @@ html {
               border: 1px solid #e6e6e6;
               border-radius: 3px;
               font-size: 1em;
-              font-family: opensans-light;
               color: white; }
         html body .right-panel .myNote p.title {
-          font-family: opensans-light;
           font-size: 3rem;
           text-align: center;
           margin: 0 auto;
           cursor: pointer;
           transition: all .2s ease;
-          height: 3rem;
-          width: 14rem; }
+          line-height: 3rem;
+          width: 25rem; }
           html body .right-panel .myNote p.title:hover {
-            font-size: 3.5em; }
+            font-size: 3.5rem; }
         html body .right-panel .myNote .article-wrapper {
           transition: all .5s ease-in-out;
           opacity: 1; }
+          html body .right-panel .myNote .article-wrapper div.type {
+            padding: 10px 0;
+            margin: 5px 0;
+            cursor: pointer;
+            color: #888;
+            transition: all .2s ease; }
+            html body .right-panel .myNote .article-wrapper div.type:hover {
+              color: #333; }
+            html body .right-panel .myNote .article-wrapper div.type p:nth-child(1) {
+              font-size: 2.5rem; }
+            html body .right-panel .myNote .article-wrapper div.type p:nth-child(2) {
+              font-size: 2rem; }
           html body .right-panel .myNote .article-wrapper article.note {
             width: 90%;
             margin: 1.5em;
@@ -231,27 +251,73 @@ html {
             margin: 1.5em;
             font-size: 2rem; }
           html body .right-panel .myNote .article-wrapper article.note p.article-title, html body .right-panel .myNote .article-wrapper article.note-detail p.article-title {
-            font-family: opensans-light;
             font-size: 1.5em;
             color: #333;
             margin-bottom: 0.5em; }
           html body .right-panel .myNote .article-wrapper article.note p.content, html body .right-panel .myNote .article-wrapper article.note-detail p.content {
-            font-family: opensans-light;
             font-size: 1em;
             color: #555;
             margin-bottom: 1em; }
             html body .right-panel .myNote .article-wrapper article.note p.content img, html body .right-panel .myNote .article-wrapper article.note-detail p.content img {
-              max-width: 90%;
-              width: initial;
-              height: initial; }
+              max-width: 90%; }
           html body .right-panel .myNote .article-wrapper article.note p.footer, html body .right-panel .myNote .article-wrapper article.note-detail p.footer {
-            font-family: opensans-light;
             font-size: 0.8em;
             color: #888; }
             html body .right-panel .myNote .article-wrapper article.note p.footer span, html body .right-panel .myNote .article-wrapper article.note-detail p.footer span {
               margin-right: 1em; }
             html body .right-panel .myNote .article-wrapper article.note p.footer .classSpan, html body .right-panel .myNote .article-wrapper article.note p.footer .alterSpan, html body .right-panel .myNote .article-wrapper article.note p.footer .deleteSpan, html body .right-panel .myNote .article-wrapper article.note-detail p.footer .classSpan, html body .right-panel .myNote .article-wrapper article.note-detail p.footer .alterSpan, html body .right-panel .myNote .article-wrapper article.note-detail p.footer .deleteSpan {
               cursor: pointer; }
+    html body #myModal .adiv-title, html body #myModal .adiv-describe {
+      height: 3em;
+      margin: 0.2em 0; }
+      html body #myModal .adiv-title input, html body #myModal .adiv-describe input {
+        height: 100%;
+        width: 95%;
+        border: none;
+        background: transparent;
+        font-size: 1.25em;
+        outline: none; }
+        html body #myModal .adiv-title input:focus, html body #myModal .adiv-describe input:focus {
+          outline: none; }
+      html body #myModal .adiv-title input.input-describe, html body #myModal .adiv-describe input.input-describe {
+        font-size: 1em; }
+    html body #myModal .adiv-content textarea {
+      height: 150px;
+      resize: vertical;
+      border: 1px solid #e6e6e6;
+      border-radius: 2px;
+      font-size: 1.1em;
+      width: 97%; }
+    html body #myModal .adiv-class {
+      height: 2em;
+      width: 100%;
+      display: flex;
+      margin: 0.5em 0; }
+      html body #myModal .adiv-class label {
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        html body #myModal .adiv-class label input {
+          width: 14px;
+          height: 14px;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          border: 1px solid #50abcd;
+          border-radius: 3px;
+          transition: all .2s ease;
+          outline: none;
+          opacity: 0.8;
+          margin: 0; }
+          html body #myModal .adiv-class label input:focus {
+            outline: none; }
+          html body #myModal .adiv-class label input:checked {
+            background: #50abcd;
+            padding: 3px;
+            background-clip: content-box; }
+        html body #myModal .adiv-class label span {
+          margin-left: 0.5em;
+          margin-right: 1em; }
   html .nodisplay {
     display: none; }
 
@@ -282,9 +348,9 @@ html {
     html body .right-panel .myNote p.title {
       transition: none; }
       html body .right-panel .myNote p.title:hover {
-        font-size: 3em; }
+        font-size: 3rem; }
       html body .right-panel .myNote p.title.active {
-        font-size: 3.5em; }
+        font-size: 3.5rem; }
     html body .right-panel .myNote .addNote {
       width: 70%;
       right: -62%; }
@@ -311,8 +377,7 @@ html {
           height: 90px; }
       html body .left-panel .self_intro .title {
         width: 40%;
-        font-size: 2.5rem;
-        font-family: "opensans-light"; }
+        font-size: 2.5rem; }
         html body .left-panel .self_intro .title p:nth-child(2) {
           display: none; }
       html body .left-panel .self_intro .icons {
@@ -325,9 +390,9 @@ html {
     html body .right-panel .myNote p.title {
       transition: none; }
       html body .right-panel .myNote p.title:hover {
-        font-size: 3em; }
+        font-size: 3.5rem; }
       html body .right-panel .myNote p.title.active {
-        font-size: 3.5em; }
+        font-size: 3.5rem; }
     html body .right-panel .myNote .addNote {
       width: 70%;
       right: -63%; }

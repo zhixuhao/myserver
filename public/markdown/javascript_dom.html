@@ -1,0 +1,394 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<style>
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: #737373;
+    background-color: white;
+    margin: 10px 13px 10px 13px;
+}
+table {
+	margin: 10px 0 15px 0;
+	border-collapse: collapse;
+}
+td,th {	
+	border: 1px solid #ddd;
+	padding: 3px 10px;
+}
+th {
+	padding: 5px 10px;	
+}
+
+a {
+    color: #0069d6;
+}
+a:hover {
+    color: #0050a3;
+    text-decoration: none;
+}
+a img {
+    border: none;
+}
+p {
+    margin-bottom: 9px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #404040;
+    line-height: 36px;
+}
+h1 {
+    margin-bottom: 18px;
+    font-size: 30px;
+}
+h2 {
+    font-size: 24px;
+}
+h3 {
+    font-size: 18px;
+}
+h4 {
+    font-size: 16px;
+}
+h5 {
+    font-size: 14px;
+}
+h6 {
+    font-size: 13px;
+}
+hr {
+    margin: 0 0 19px;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+}
+blockquote {
+    padding: 13px 13px 21px 15px;
+    margin-bottom: 18px;
+    font-family:georgia,serif;
+    font-style: italic;
+}
+blockquote:before {
+    content:"\201C";
+    font-size:40px;
+    margin-left:-10px;
+    font-family:georgia,serif;
+    color:#eee;
+}
+blockquote p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+    margin-bottom: 0;
+    font-style: italic;
+}
+code, pre {
+    font-family: Monaco, Andale Mono, Courier New, monospace;
+}
+code {
+    background-color: #fee9cc;
+    color: rgba(0, 0, 0, 0.75);
+    padding: 1px 3px;
+    font-size: 12px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+pre {
+    display: block;
+    padding: 14px;
+    margin: 0 0 18px;
+    line-height: 16px;
+    font-size: 11px;
+    border: 1px solid #d9d9d9;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+pre code {
+    background-color: #fff;
+    color:#737373;
+    font-size: 11px;
+    padding: 0;
+}
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:10px auto;
+    }
+}
+@media print {
+	body,code,pre code,h1,h2,h3,h4,h5,h6 {
+		color: black;
+	}
+	table, pre {
+		page-break-inside: avoid;
+	}
+}
+</style>
+<title>Javascript 知识</title>
+
+</head>
+<body>
+<h1>Javascript 知识</h1>
+
+<p><strong>Dom </strong>全称是document object model,是一套对文档内容进行抽象和概念化的方法，Bom全称是Brower object model，是window.*所有方法和属性。</p>
+
+<p><strong>节点</strong>，包括：
+1. 元素节点
+2. 属性节点
+3. 文本节点</p>
+
+<p>文本节点和属性节点总是包含在元素节点的内部，但是属性节点并不是元素节点的子节点，一般包括属性节点和文本节点，比如说&lt;p title="book">this is a book&lt;/p>，p是一个元素节点，title="book"是一个属性节点，this is a book 是文本节点.</p>
+
+<p>dom节点问题可以参考</p>
+
+<blockquote><p>http://www.cnblogs.com/starof/p/4478481.html，</p></blockquote>
+
+<p>元素节点里面可能会有很多个子节点，比如element.childNodes中除了子元素节点（nodeType为1）之外，还有一些文本节点（nodeType为3），这些文本节点可能是空格，或者换行符，属性节点是不在childNodes这个数组里面的，因为属性节点实际上是附属于元素的，所以不被看做是元素的子节点，因为并没有被当做是DOM的一部分，可以通过element.attributes[i]得到属性节点，或者通过element.getAttributeNode(“…")来得到属性节点</p>
+
+<div align=center><img src = images/dom1.png width=600></div>
+
+
+<div align=center><img src = images/dom2.png width=600></div>
+
+
+<div align=center><img src = images/dom3.png width=600></div>
+
+
+<p><strong>Dom操作：</strong></p>
+
+<div align=center><img src = images/dom4.png width=600></div>
+
+
+<p><strong>Dom选择器</strong></p>
+
+<p>除了通过id，class,name,tag之外几个常规的得到节点的方法之外，还有一个方法：document.querySelectorAll，这个是html5新特性和jquery类选择器很相似</p>
+
+<div align=center><img src = images/dom5.png width=600></div>
+
+
+<div align=center><img src = images/dom6.png width=600></div>
+
+
+<p><strong>JS声明</strong></p>
+
+<p>注意最好用var进行声明，因为如果不使用var进行声明js会自动进行变量作用域提升，沿着当前作用域链进行查找，如果直到全局环境都没有找到该对象，那么会自动创建一个全局对象。</p>
+
+<p><strong>Dom Core 和 Dom Html</strong></p>
+
+<pre><code>W3C所制订的DOM Level分为两大模块：Core和HTML。
+
+第一个大模块是Core核心，W3C规范是这样描述Core的：满足软件开发者和Web脚本编写者，访问和操控产品项目中包含的可解析的HTML和XML内容。DOM Core，并不专属于JavaScript（如php也支持）。
+
+第二个HTML模块，规范描述为：HTML之中特定元素的功能，和恰到好处的、易用的、针对常见性任务的HTML文档操作机制。HTML模块的意义也在于解决了向后兼容的问题。
+
+DOM（文档对象模型）是由W3C制定的一套访问和操作XML（eXtensible Markup Language）文档的标准，即API。
+
+DOM与特定的平台、浏览器、语言无关，很多种语言都实现了DOM，比如因为JavaScript和PHP都实现了DOM
+</code></pre>
+
+<p>区分两者：</p>
+
+<p>HTML文档可以使用CoreAPI和HTMLAPI两者；而XML文档只能使用CoreAPI。</p>
+
+<p>DOM Core模块：接口基于节点方式（Node-based）。myElement.getAttributes("id")</p>
+
+<p>DOM1 HTML的模块：接口基于元素方式（Element-based）；myElement.id</p>
+
+<p>一般推荐使用Dom Core，因为所有浏览器都支持，不存在兼容性问题。</p>
+
+<p>参考：</p>
+
+<blockquote><p>http://www.cnblogs.com/windrainpy/archive/2012/09/12/2679640.html</p></blockquote>
+
+<p><strong>dom scrollTop用法：</strong></p>
+
+<p>得到的是该元素的滚动距离，比如说一个div设置高度100px，overflow:auto，那么该div就是可以滚动的，document.getElementsbyTagName(“div”)[0].scrollTop返回的就是滚动的距离，注意，当判断body是否滚动的时候，height：100%，overflow:auto，此时scrollTop是失效的，一直都是0，所以height不要设置为100%，height为100%时候，overflow:initial，scrollTop是可以的。</p>
+
+<p><strong>javascript伪协议：</strong></p>
+
+<p>url如果是这种形式：javascript:alert(123)，就是用了伪协议，这种方法不好，老浏览器会失败，而且禁用js的浏览器也不会触发。</p>
+
+<p><strong>ajax</strong></p>
+
+<p>ajax不是一种新的技术，而是几种技术综合在一起的一个机制，可以实现不刷新页面获取数据并更新页面。</p>
+
+<p>其核心是XmlHttpRequest(xhr)，以下是使用方法：</p>
+
+<pre><code>function sendAjax() {
+//构造表单数据
+var formData = new FormData();
+formData.append('username', 'johndoe');
+formData.append('id', 123456);
+//创建xhr对象 
+var xhr = new XMLHttpRequest();
+//设置xhr请求的超时时间
+xhr.timeout = 3000;
+//设置响应返回的数据格式
+xhr.responseType = "text";
+//创建一个 post 请求，采用异步
+xhr.open('POST', '/server', true);
+//注册相关事件回调处理函数
+xhr.onload = function(e) { 
+if(this.status == 200||this.status == 304){
+    alert(this.responseText);
+}
+};
+xhr.ontimeout = function(e) { ... };
+xhr.onerror = function(e) { ... };
+xhr.upload.onprogress = function(e) { ... };
+
+//发送数据
+xhr.send(formData);
+}
+</code></pre>
+
+<p>参考：</p>
+
+<blockquote><p>https://segmentfault.com/a/1190000004322487</p></blockquote>
+
+<p>现在已经发展到了level2:</p>
+
+<blockquote><p>http://www.ruanyifeng.com/blog/2012/09/xmlhttprequest_level_2.html</p></blockquote>
+
+<p>可以实现上传文件，参考：</p>
+
+<blockquote><p>http://www.jianshu.com/p/46e6e03a0d53
+http://www.voidcn.com/blog/anwenxixi/article/p-1529198.html
+http://www.voidcn.com/blog/u010729348/article/p-2285452.html</p></blockquote>
+
+<p><strong>阻止默认事件，冒泡</strong></p>
+
+<p>event.stopPropagation()是阻止事件冒泡。</p>
+
+<p>event.preventDefault()是阻止默认事件。可以阻止的默认事件包括超链接的跳转，checkbox的勾选等。</p>
+
+<p>举例:</p>
+
+<div align=center><img src = images/preventdefault.png width=600></div>
+
+
+<p>点击开启，如果不阻止默认事件，那么checkbox的状态马上就会变成关闭，而不是先弹出模态框进行确认。</p>
+
+<pre><code>$("#inform_email").click(
+        function(event){
+          if($(this).hasClass("checked")){
+            enSure('mail');
+          }
+          else{
+            inform_change('mail',$("#inform_email")[0],1);
+          }
+          event.preventDefault();//阻止默认事件
+        }
+);
+</code></pre>
+
+<p><strong>null和undefined区别:</strong></p>
+
+<p>每当声明一个对象的时候，比如var tmpObject; 这个对象默认就是undefined，null表示一个空对象指针，所以typeof时候返回object，如果定义的对象将来是用来保存对象，那么最好初始化为null。</p>
+
+<p><strong>Boolean()得到布尔值:</strong></p>
+
+<p>Boolean("text") = true; Boolean("") = false; Boolean(num) = true(当num非零且为数字) false(num为0或者NaN(表示非数字))</p>
+
+<p><strong>===与==</strong></p>
+
+<p>等于是进行数值转换之后才比较，10 == “10”返回true，全等于必须数值和类型都相等才可以</p>
+
+<p>switch就是用的全等</p>
+
+<p><strong>js函数的参数理解：</strong></p>
+
+<p>ECMAScript的函数不介意传递进来多少参数，比如定义一个函数：</p>
+
+<pre><code>function add(a,b){
+    alert(a+b)
+}
+</code></pre>
+
+<p>你可以调用add(1,2,3,...)但是结果就是3，这是因为ECMAScript的参数是以数组的形式保存的，上面定义的add函数，等价于:</p>
+
+<pre><code>function add(){
+    alert(arguments[0]+argument[1])
+}
+</code></pre>
+
+<p>同样可以这样调用add(1,2,3,…)。</p>
+
+<p>注意，如果函数内部用到的参数没有传递进来，结果使不对的，比如add(1)这样结果就不对，返回NaN。
+如果要完善一下add函数，就要:</p>
+
+<pre><code>function add(){
+if(arguments.length==1){
+    alert(arguments[0])
+}
+if(arguments.length==2){
+    alert(arguments[0]+arguments[1])
+}
+}
+</code></pre>
+
+<p><strong>js的基本类型：</strong>
+一共有六中基本数据类型：</p>
+
+<ol>
+<li>Undefined</li>
+<li>Null</li>
+<li>Boolean</li>
+<li>Number</li>
+<li>String</li>
+<li>Object</li>
+</ol>
+
+
+<p>所以typeof x 能够得到的结果只能是这六种之一。instanceof 可以判断是否是某个对象的实例。</p>
+
+<div align=center><img src = images/type.png width=200></div>
+
+
+<p><strong>引用数据类型</strong></p>
+
+<p>复制变量值的时候，简单类型(number,string...)和引用类型(object)是不同的</p>
+
+<pre><code>var num1 = 5;
+var num2 = num1;
+</code></pre>
+
+<p>表示的是创建了一个新值，然后复制到新变量上。</p>
+
+<pre><code>var obj1 = new Object(); 
+var obj2 = obj1;
+obj1.name = “Nike”;
+alert(obj2.name)//Nike
+</code></pre>
+
+<p>表示两个obj引用同一个对象。</p>
+</body>
+</html>

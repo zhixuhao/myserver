@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>智绪浩的个人主页</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/vender/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="/css/progressjs.css">
+    <link rel="stylesheet" type="text/css" href="vender/simditor/simditor.css" />
+    <link rel="stylesheet" type="text/css" href="vender/bootstrap/dist/css/bootstrap.min.css" />
+</head>
+<body>
+<div id="porgress"></div>
+
+<div class="left-panel">
+    <div class="self_intro">
+        <div class="img_holder">
+            <img src="images/lufei1.jpg">
+        </div>
+        <div class="title">
+            <p>
+                智绪浩的网站
+            </p>
+            <p>
+                George's website
+            </p>
+        </div>
+        <div class="icons">
+            <i class="fa fa-envelope-o" aria-hidden="true"></i>
+            <i class="fa fa-weixin" aria-hidden="true"></i>
+            <i class="fa fa-weixin" aria-hidden="true"></i>
+            <i class="fa fa-weixin" aria-hidden="true"></i>
+            <i class="fa fa-weixin" aria-hidden="true"></i>
+            <i class="fa fa-weixin" aria-hidden="true"></i>
+        </div>
+        <div class="intro_text">
+            <p>
+                我今年23岁,热爱前端,希望自己的作品能被更多人看到,深知自己的不足,所以渴求新的知识,盼望与牛逼的人做牛逼的事! best wishes!
+            </p>
+        </div>
+    </div>
+    <div class="recent_work">
+    </div>
+    <div class="news">
+
+    </div>
+</div>
+<div class="right-panel">
+    <label id="upload-label">
+        <span>上传文件</span>
+        <input type="file" name="file" style="display:none">
+    </label>
+    <button id="upload" style="display: none">上传</button>
+    <div class="myNote">
+        <div class="addNote" id="addNote">
+            <div class="icon">
+                <a onclick="addnote(this)"><i class="fa fa-plus" aria-hidden="true"></i></a>
+            </div>
+            <form id="add-Note">
+                <div class="adiv-title">
+                    <input class="input-title" placeholder="请输入标题">
+                </div>
+                <div class="adiv-describe">
+                    <input class="input-describe" placeholder="请输入描述">
+                </div>
+                <div class="adiv-content">
+                    <textarea id="simditor_area" placeholder="请输入内容"></textarea>
+                </div>
+                <div class="adiv-class">
+                    <label><input type="radio" name="note-class" checked value="knowledge"><span>知识点</span></label>
+                    <label><input type="radio" name="note-class" value="fromWork"><span>工作</span></label>
+                    <label><input type="radio" name="note-class" value="collection"><span>整理</span></label>
+                </div>
+                <div class="adiv-button">
+                    <button type="button" id="post_button" onclick="post_note()">提交</button>
+                </div>
+            </form>
+        </div>
+        {{{title}}}
+        <div class="article-wrapper" id="article-wrapper">
+            <!--	<article class="note" data-target="/detail/1">
+                    <p class="article-title">
+                        accesskey 用法
+                    </p>
+                    <p class="content">
+                        accesskey 是快捷键，可以用使得元素获得焦点，比如跳转超链接，或者input输入，Alt + accessKey (或者 Shift + Alt + accessKey)，mac是control+option+accessKey
+                    </p>
+                    <p class="footer">
+                        <span>发布于2016-10-01 15:30</span>
+                        <span>标签</span>
+                        <span>收藏</span>
+                    </p>
+                </article>
+                <article class="note" data-target="/detail/2">
+                    <p class="article-title">
+                        accesskey 用法
+                    </p>
+                    <p class="content">
+                        accesskey 是快捷键，可以用使得元素获得焦点，比如跳转超链接，或者input输入，Alt + accessKey (或者 Shift + Alt + accessKey)，mac是control+option+accessKey
+                    </p>
+                    <p class="footer">
+                        <span>发布于2016-10-01 15:30</span>
+                        <span>标签</span>
+                        <span>收藏</span>
+                    </p>
+                </article>
+                <article class="note" data-target="/detail/3">
+                    <p class="article-title">
+                        accesskey 用法
+                    </p>
+                    <p class="content">
+                        accesskey 是快捷键，可以用使得元素获得焦点，比如跳转超链接，或者input输入，Alt + accessKey (或者 Shift + Alt + accessKey)，mac是control+option+accessKey
+                    </p>
+                    <p class="footer">
+                        <span>发布于2016-10-01 15:30</span>
+                        <span>标签</span>
+                        <span>收藏</span>
+                    </p>
+                </article>
+                <article class="note" data-target="/detail/4">
+                    <p class="article-title">
+                        accesskey 用法
+                    </p>
+                    <p class="content">
+                        accesskey 是快捷键，可以用使得元素获得焦点，比如跳转超链接，或者input输入，Alt + accessKey (或者 Shift + Alt + accessKey)，mac是control+option+accessKey
+                    </p>
+                    <p class="footer">
+                        <span>发布于2016-10-01 15:30</span>
+                        <span>标签</span>
+                        <span>收藏</span>
+                    </p>
+                </article>
+                <article class="note" data-target="/detail/5">
+                    <p class="article-title">
+                        accesskey 用法
+                    </p>
+                    <p class="content">
+                        accesskey 是快捷键，可以用使得元素获得焦点，比如跳转超链接，或者input输入，Alt + accessKey (或者 Shift + Alt + accessKey)，mac是control+option+accessKey
+                    </p>
+                    <p class="footer">
+                        <span>发布于2016-10-01 15:30</span>
+                        <span>标签</span>
+                        <span>收藏</span>
+                    </p>
+                </article>
+                -->
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"
+                        aria-hidden="true">×
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                    上传文件
+                </h4>
+            </div>
+            <div class="modal-body">
+                <div class="adiv-title">
+                    <input class="input-title" placeholder="请输入标题">
+                </div>
+                <div class="adiv-describe">
+                    <input class="input-describe" placeholder="请输入描述">
+                </div>
+                <div class="adiv-class">
+                    <label><input type="radio" name="note-class" checked value="knowledge"><span>知识点</span></label>
+                    <label><input type="radio" name="note-class" value="fromWork"><span>工作</span></label>
+                    <label><input type="radio" name="note-class" value="collection"><span>整理</span></label>
+                </div>
+                <div class="modal-body-text"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default"
+                        data-dismiss="modal">关闭
+                </button>
+                <button type="button" class="btn btn-primary" onclick="startUploadFile()">
+                    确定
+                </button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<script src="vender/jquery/dist/jquery.js"></script>
+<script src="js/turn.js"></script>
+<script src="js/progress.js"></script>
+<script type="text/javascript" src="vender/simditor/module.js"></script>
+<script type="text/javascript" src="vender/simditor/hotkeys.js"></script>
+<script type="text/javascript" src="vender/simditor/uploader.js"></script>
+<script type="text/javascript" src="vender/simditor/simditor.js"></script>
+<script type="text/javascript" src="vender/bootstrap/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/myFunc.js"></script>
+<script>
+    var type ="{{type}}";
+
+    $(document).ready(function(){
+        initSimditor();
+        mobile_click();
+        initUploadFile();
+        switch(type){
+            case "alltype":
+                getAllType();
+                break;
+            case "notes":
+                getAllNotes();
+                break;
+            case "markdown":
+                getMarkdown();
+                break;
+            default:
+                break;
+        }
+    });
+
+</script>
+</body>
+</html>

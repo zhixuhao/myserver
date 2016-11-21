@@ -28,6 +28,8 @@ html{
   body{
     margin: 0;
     height: 100%;
+    font-family: opensans-light;
+    box-sizing: content-box;
     div{
       box-sizing: border-box;
     }
@@ -38,7 +40,7 @@ html{
       width: 33.3%;
       height: 100%;
       position: fixed;
-      background-image: url("../image/left_bg1.jpg");
+      background-image: url("../images/left_bg1.jpg");
       background-size: cover;
       background-repeat: no-repeat;
       div{
@@ -76,7 +78,6 @@ html{
         }
         .intro_text{
           text-align: center;
-          font-family: opensans-light;
           font-size: 1.5rem;
           p{
             width: 70%;
@@ -91,8 +92,19 @@ html{
       width: 66.6%;
       height: 100%;
       margin-top: 0 !important;
+      position: relative;
+      #upload-label{
+        position: absolute;
+        left:15px;
+        bottom: 15px;
+        span{
+          font-size: 16px;
+          background: #f1f1f1;
+          border-radius: 3px;
+        }
+      }
       .noteBook{
-        background-image: url('../image/wood.jpg');
+        background-image: url('../images/wood.jpg');
         height: 100%;
         margin-top: 0 !important;
         position: relative;
@@ -119,7 +131,7 @@ html{
             .bb-item{
               height: 100%;
               width: 100%;
-              background-image: url('../image/book.png');
+              background-image: url('../images/book.png');
               background-size: cover;
               align-items: center;
               justify-content: center;
@@ -158,10 +170,13 @@ html{
             left:0;
             cursor: pointer;
             i{
-              font-size: 2em;
+              width: 2rem;
+              height: 2rem;
+              display: flex;
+              align-items: center;
+              justify-content: center;
               background-color: #aaa;
               border-radius: 50%;
-              padding:4px 4px 2px 4px;
               color: white;
               transition: all .5s ease-in-out;
             }
@@ -169,7 +184,7 @@ html{
           form{
             width: 90%;
             margin-left: 15%;
-            font-family: opensans-light;
+
             font-size: 1.5rem;
             background-color: $bg-color;
             .simditor-body{
@@ -188,7 +203,6 @@ html{
                 border:none;
                 background: transparent;
                 font-size: 1.25em;
-                font-family: opensans-light;
                 &:focus{
                   outline: none;
                 }
@@ -204,7 +218,6 @@ html{
                 border:1px solid $border;
                 border-radius: 2px;
                 font-size: 1.1em;
-                font-family: opensans-light;
                 width: 97%;
               }
 
@@ -249,28 +262,43 @@ html{
                 border:1px solid $border;
                 border-radius: 3px;
                 font-size: 1em;
-                font-family: opensans-light;
                 color:white;
               }
             }
           }
         }
         p.title{
-          font-family: opensans-light;
           font-size: 3rem;
           text-align: center;
           margin: 0 auto;
           cursor:pointer;
           transition: all .2s ease;
-          height: 3rem;
-          width: 14rem;
+          line-height: 3rem;
+          width: 25rem;
           &:hover{
-            font-size: 3.5em;
+            font-size: 3.5rem;
           }
         }
         .article-wrapper{
           transition: all .5s ease-in-out;
           opacity: 1;
+          div.type{
+            padding:10px 0;
+            margin:5px 0;
+            cursor:pointer;
+            color:$font-light;
+            transition: all .2s ease;
+            &:hover{
+              color:$font-black;
+
+            }
+            p:nth-child(1){
+              font-size: 2.5rem;
+            }
+            p:nth-child(2){
+              font-size: 2rem;
+            }
+          }
           article.note{
             width: 90%;
             margin: 1.5em;
@@ -293,24 +321,19 @@ html{
           article.note,article.note-detail{
 
             p.article-title{
-              font-family: opensans-light;
               font-size: 1.5em;
               color:$font-black;
               margin-bottom: 0.5em;
             }
             p.content{
-              font-family: opensans-light;
               font-size: 1em;
               color:$font-normal;
               margin-bottom: 1em;
               img{
                 max-width: 90%;
-                width:initial;
-                height: initial;
               }
             }
             p.footer{
-              font-family: opensans-light;
               font-size: 0.8em;
               color:$font-light;
               span{
@@ -320,6 +343,73 @@ html{
                 cursor: pointer;
               }
             }
+          }
+        }
+      }
+    }
+    #myModal{
+      .adiv-title,.adiv-describe{
+        height:3em;
+        margin:0.2em 0;
+        input{
+          height: 100%;
+          width: 95%;
+          border:none;
+          background: transparent;
+          font-size: 1.25em;
+          outline: none;
+          &:focus{
+            outline: none;
+          }
+        }
+        input.input-describe{
+          font-size: 1em;
+        }
+      }
+      .adiv-content{
+        textarea{
+          height: 150px;
+          resize: vertical;
+          border:1px solid $border;
+          border-radius: 2px;
+          font-size: 1.1em;
+          width: 97%;
+        }
+
+      }
+      .adiv-class{
+        height: 2em;
+        width: 100%;
+        display: flex;
+        margin:0.5em 0;
+        label{
+          cursor:pointer;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          input{
+            width:14px;
+            height:14px;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            border:1px solid $theme-blue;
+            border-radius: 3px;
+            transition:all .2s ease;
+            outline:none;
+            opacity: 0.8;
+            margin: 0;
+            &:focus{
+              outline: none;
+            }
+            &:checked{
+              background: $theme-blue;
+              padding: 3px;
+              background-clip: content-box;
+            }
+          }
+          span{
+            margin-left: 0.5em;
+            margin-right: 1em;
           }
         }
       }
@@ -368,10 +458,10 @@ html{
           p.title{
             transition: none;
             &:hover{
-              font-size: 3em;
+              font-size: 3rem;
             }
             &.active{
-              font-size: 3.5em;
+              font-size: 3.5rem;
             }
           }
           .addNote{
@@ -412,7 +502,7 @@ html{
           .title{
             width: 40%;
             font-size: 2.5rem;
-            font-family:"opensans-light";
+            //font-family:"opensans-light";
             p:nth-child(2){
               display: none;
             }
@@ -432,10 +522,10 @@ html{
           p.title{
             transition: none;
             &:hover{
-              font-size: 3em;
+              font-size: 3.5rem;
             }
             &.active{
-              font-size: 3.5em;
+              font-size: 3.5rem;
             }
           }
           .addNote{
