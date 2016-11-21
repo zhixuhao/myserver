@@ -2,39 +2,75 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0c487272-a78f-42bd-b52c-d6619d4cb33f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/md_images/after.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/md_images/after1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/md_images/before.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/md_images/chats.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/md_images/dash.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/md_images/dom1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/md_images/dom2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/md_images/dom3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/md_images/dom4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/md_images/dom5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/md_images/dom6.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/md_images/flex1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/md_images/flex2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/md_images/flex3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/md_images/flex4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/md_images/ionic目录.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/md_images/preventdefault.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/md_images/prop1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/md_images/prop2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/md_images/prop3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/md_images/prop4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/md_images/type.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/image/left_bg1.jpg" afterPath="$PROJECT_DIR$/public/images/left_bg1.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/image/lufei1.jpg" afterPath="$PROJECT_DIR$/public/images/lufei1.jpg" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/.bin/md2html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/.bin/nopt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/abbrev/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/abbrev/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/abbrev/abbrev.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/abbrev/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/markdown/.npmignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/markdown/.travis.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/markdown/Changes.markdown" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/markdown/README.markdown" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/markdown/bin/md2html.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/markdown/lib/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/markdown/lib/markdown.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/markdown/markdown-js.sublime-project" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/markdown/markdown-js.sublime-workspace" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/markdown/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/markdown/seed.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/nopt/.npmignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/nopt/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/nopt/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/nopt/bin/nopt.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/nopt/examples/my-program.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/nopt/lib/nopt.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/nopt/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/markdown/css3_动画.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/markdown/css3_学习-1479627380671.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/markdown/css3_学习-1479690943140.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/markdown/css3_学习.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/markdown/css3动画-1479626234724.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/markdown/css3动画.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/markdown/css3动画.md-1479626022985.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/markdown/flex_布局.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/markdown/html5_知识点-1479718930466.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/markdown/html5_知识点.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/markdown/ionic学习笔记-1479626914794.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/markdown/ionic学习笔记.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/markdown/javascript_dom-1479626288651.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/markdown/javascript_dom-1479627554935.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/markdown/javascript_dom-1479627919394.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/markdown/javascript_dom-1479628479043.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/markdown/javascript_dom-1479628653268.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/markdown/javascript_dom-1479628962222.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/markdown/javascript_dom-1479716085657.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/markdown/javascript_dom-1479718802096.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/markdown/javascript_dom.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/markdown/javascript_dom.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/markdown/jquery_学习.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/markdown/xml_与_json-1479719542115.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/markdown/xml_与_json.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/markdown/伪元素用法总结-1479691730667.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/markdown/伪元素用法总结-1479717546278.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/markdown/伪元素用法总结-1479717607149.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/markdown/伪元素用法总结-1479717686570.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/markdown/伪元素用法总结-1479718637694.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/markdown/伪元素用法总结.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/file-1476692429477.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/file-1476692453617.blob" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/file-1476692487076.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/file-1476707430187.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/file-1476752712556.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/file-1476882107003.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/file-1476943976868.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/file-1476957066988.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/file-1476957073090.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/file-1476966359163.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/file-1479020603663.jpg" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/markdown-js/package.json" afterPath="$PROJECT_DIR$/node_modules/markdown-js/package.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/.sass-cache/75570e787b3856c032f62258643563bd99bdbf67/style.scssc" afterPath="$PROJECT_DIR$/public/.sass-cache/75570e787b3856c032f62258643563bd99bdbf67/style.scssc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/style.css" afterPath="$PROJECT_DIR$/public/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/style.css.map" afterPath="$PROJECT_DIR$/public/css/style.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index.html" afterPath="$PROJECT_DIR$/public/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/scss/style.scss" afterPath="$PROJECT_DIR$/public/scss/style.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server.js" afterPath="$PROJECT_DIR$/server.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/note.html" afterPath="$PROJECT_DIR$/views/note.html" />
     </list>
     <ignored path="myserver.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -56,7 +92,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="server.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/server.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="162" column="35" selection-start-line="162" selection-start-column="35" selection-end-line="162" selection-end-column="35" />
+              <folding>
+                <element signature="e#2297#2779#0" expanded="false" />
+                <element signature="e#2821#3522#0" expanded="false" />
+                <element signature="e#3564#3840#0" expanded="false" />
+                <element signature="e#3912#4080#0" expanded="false" />
+                <element signature="e#5684#5878#0" expanded="false" />
+                <element signature="e#6464#6658#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="240">
@@ -148,16 +201,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="234">
               <caret line="361" column="22" selection-start-line="361" selection-start-column="22" selection-end-line="361" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="progress.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/progress.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="28" column="16" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -293,120 +336,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myserver" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myserver" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vender" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myserver" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myserver" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vender" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bootstrap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myserver" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myserver" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vender" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bootstrap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dist" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myserver" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myserver" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vender" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bootstrap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dist" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myserver" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myserver" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scss" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -884,12 +813,12 @@
       <workItem from="1479383866232" duration="2757000" />
       <workItem from="1479536232167" duration="77000" />
       <workItem from="1479539813530" duration="13275000" />
-      <workItem from="1479689951909" duration="11005000" />
+      <workItem from="1479689951909" duration="11747000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="127782000" />
+    <option name="totallyTimeSpent" value="128524000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -1362,42 +1291,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/myFunc.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1200">
-          <caret line="181" column="21" selection-start-line="181" selection-start-column="21" selection-end-line="181" selection-end-column="21" />
-          <folding>
-            <element signature="n#!!doc;n#addnote#0" expanded="false" />
-            <element signature="n#!!block;n#addnote#0" expanded="false" />
-            <element signature="n#!!block;n#showNoteDetail#0" expanded="false" />
-            <element signature="n#!!block;n#getAllType#0" expanded="false" />
-            <element signature="n#!!block;n#showAllType#0" expanded="false" />
-            <element signature="n#!!block;n#initUploadFile#0" expanded="false" />
-            <element signature="n#!!block;n#initSimditor#0" expanded="false" />
-            <element signature="n#!!block;n#alterNote#0" expanded="false" />
-            <element signature="n#!!block;n#deleteNote#0" expanded="false" />
-            <element signature="n#!!block;n#post_note#0" expanded="false" />
-            <element signature="n#!!block;n#getNoteData#0" expanded="false" />
-            <element signature="n#!!block;n#mobile_click#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="313" column="3" selection-start-line="313" selection-start-column="3" selection-end-line="313" selection-end-column="3" />
-          <folding>
-            <element signature="e#2297#2779#0" expanded="false" />
-            <element signature="e#2821#3522#0" expanded="false" />
-            <element signature="e#3564#3840#0" expanded="false" />
-            <element signature="e#3912#4080#0" expanded="false" />
-            <element signature="e#5684#5878#0" expanded="false" />
-            <element signature="e#6464#6658#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/css/modal.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -1448,6 +1341,42 @@
             <marker date="1479720194000" expanded="false" signature="3574:3938" ph="..." />
             <marker date="1479720194000" expanded="false" signature="3990:4354" ph="..." />
             <marker date="1479720194000" expanded="false" signature="4406:4770" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/myFunc.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1200">
+          <caret line="181" column="21" selection-start-line="181" selection-start-column="21" selection-end-line="181" selection-end-column="21" />
+          <folding>
+            <element signature="n#!!doc;n#addnote#0" expanded="false" />
+            <element signature="n#!!block;n#addnote#0" expanded="false" />
+            <element signature="n#!!block;n#showNoteDetail#0" expanded="false" />
+            <element signature="n#!!block;n#getAllType#0" expanded="false" />
+            <element signature="n#!!block;n#showAllType#0" expanded="false" />
+            <element signature="n#!!block;n#initUploadFile#0" expanded="false" />
+            <element signature="n#!!block;n#initSimditor#0" expanded="false" />
+            <element signature="n#!!block;n#alterNote#0" expanded="false" />
+            <element signature="n#!!block;n#deleteNote#0" expanded="false" />
+            <element signature="n#!!block;n#post_note#0" expanded="false" />
+            <element signature="n#!!block;n#getNoteData#0" expanded="false" />
+            <element signature="n#!!block;n#mobile_click#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="162" column="35" selection-start-line="162" selection-start-column="35" selection-end-line="162" selection-end-column="35" />
+          <folding>
+            <element signature="e#2297#2779#0" expanded="false" />
+            <element signature="e#2821#3522#0" expanded="false" />
+            <element signature="e#3564#3840#0" expanded="false" />
+            <element signature="e#3912#4080#0" expanded="false" />
+            <element signature="e#5684#5878#0" expanded="false" />
+            <element signature="e#6464#6658#0" expanded="false" />
           </folding>
         </state>
       </provider>
