@@ -251,6 +251,9 @@ html{
           }
         }
         .markdown{
+          p{
+            word-wrap: break-word;
+          }
           >p{
             margin:10px 5px;
             strong{
@@ -449,6 +452,8 @@ html{
         margin-left: 0;
         min-height: 80%;
         .myNote{
+          padding-top: 1.5em;
+          padding: 1em;
           p.title{
             transition: none;
             &:hover{

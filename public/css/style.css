@@ -166,7 +166,8 @@ html {
                   border-radius: 3px;
                   transition: all .2s ease;
                   outline: none;
-                  opacity: 0.8; }
+                  opacity: 0.8;
+                  margin: 0; }
                   html body .right-panel .myNote .addNote form .adiv-class label input:checked {
                     background: #50abcd;
                     padding: 3px;
@@ -193,6 +194,8 @@ html {
           width: 25rem; }
           html body .right-panel .myNote p.title:hover {
             font-size: 3.5rem; }
+        html body .right-panel .myNote .markdown p {
+          word-wrap: break-word; }
         html body .right-panel .myNote .markdown > p {
           margin: 10px 5px; }
           html body .right-panel .myNote .markdown > p strong {
@@ -333,101 +336,104 @@ html {
     width: 100%;
     margin-left: 0;
     min-height: 80%; }
-    html body .right-panel .myNote p.title {
-      transition: none; }
-      html body .right-panel .myNote p.title:hover {
-        font-size: 3rem; }
-      html body .right-panel .myNote p.title.active {
-        font-size: 3.5rem; }
-    html body .right-panel .myNote .addNote {
-      width: 100%;
-      height: 70%;
-      bottom: -70%;
-      right: -8px;
-      position: fixed;
-      top: initial;
-      -webkit-transition: all .5s ease-in;
-      -moz-transition: all .5s ease-in;
-      transition: all .5s ease-in;
-      z-index: 1000; }
-      html body .right-panel .myNote .addNote.active {
-        bottom: 0;
-        right: -8px; }
-        html body .right-panel .myNote .addNote.active .icon i {
-          transform: rotate(45deg); }
-      html body .right-panel .myNote .addNote .icon {
-        position: absolute;
-        top: -40px;
-        right: 20px; }
-        html body .right-panel .myNote .addNote .icon i {
-          position: absolute;
-          right: 0px; }
-      html body .right-panel .myNote .addNote form {
+    html body .right-panel .myNote {
+      padding-top: 1.5em;
+      padding: 1em; }
+      html body .right-panel .myNote p.title {
+        transition: none; }
+        html body .right-panel .myNote p.title:hover {
+          font-size: 3rem; }
+        html body .right-panel .myNote p.title.active {
+          font-size: 3.5rem; }
+      html body .right-panel .myNote .addNote {
         width: 100%;
-        margin-left: 0;
-        font-size: 1.5rem;
-        background-color: #fafbff; }
-        html body .right-panel .myNote .addNote form .simditor-body {
-          min-height: 100px;
-          max-height: 150px;
-          overflow: auto; }
-        html body .right-panel .myNote .addNote form > div {
-          width: 95%;
-          margin-bottom: 1em; }
-        html body .right-panel .myNote .addNote form .adiv-title, html body .right-panel .myNote .addNote form .adiv-describe {
-          height: 2em; }
-          html body .right-panel .myNote .addNote form .adiv-title input, html body .right-panel .myNote .addNote form .adiv-describe input {
-            height: 100%;
+        height: 80%;
+        bottom: -80%;
+        right: -8px;
+        position: fixed;
+        top: initial;
+        -webkit-transition: all .5s ease-in;
+        -moz-transition: all .5s ease-in;
+        transition: all .5s ease-in;
+        z-index: 1000; }
+        html body .right-panel .myNote .addNote.active {
+          bottom: 0;
+          right: -8px; }
+          html body .right-panel .myNote .addNote.active .icon i {
+            transform: rotate(45deg); }
+        html body .right-panel .myNote .addNote .icon {
+          position: absolute;
+          top: -40px;
+          right: 20px; }
+          html body .right-panel .myNote .addNote .icon i {
+            position: absolute;
+            right: 0px; }
+        html body .right-panel .myNote .addNote form {
+          width: 100%;
+          margin-left: 0;
+          font-size: 1.5rem;
+          background-color: #fafbff; }
+          html body .right-panel .myNote .addNote form .simditor-body {
+            min-height: 100px;
+            max-height: 150px;
+            overflow: auto; }
+          html body .right-panel .myNote .addNote form > div {
             width: 95%;
-            border: none;
-            background: transparent;
-            font-size: 1.25em; }
-            html body .right-panel .myNote .addNote form .adiv-title input:focus, html body .right-panel .myNote .addNote form .adiv-describe input:focus {
-              outline: none; }
-          html body .right-panel .myNote .addNote form .adiv-title input.input-describe, html body .right-panel .myNote .addNote form .adiv-describe input.input-describe {
-            font-size: 1em; }
-        html body .right-panel .myNote .addNote form .adiv-content textarea {
-          height: 150px;
-          resize: vertical;
-          border: 1px solid #e6e6e6;
-          border-radius: 2px;
-          font-size: 1.1em;
-          width: 97%; }
-        html body .right-panel .myNote .addNote form .adiv-class {
-          height: 2em;
-          width: 100%;
-          display: flex; }
-          html body .right-panel .myNote .addNote form .adiv-class label {
+            margin-bottom: 1em; }
+          html body .right-panel .myNote .addNote form .adiv-title, html body .right-panel .myNote .addNote form .adiv-describe {
+            height: 2em; }
+            html body .right-panel .myNote .addNote form .adiv-title input, html body .right-panel .myNote .addNote form .adiv-describe input {
+              height: 100%;
+              width: 95%;
+              border: none;
+              background: transparent;
+              font-size: 1.25em; }
+              html body .right-panel .myNote .addNote form .adiv-title input:focus, html body .right-panel .myNote .addNote form .adiv-describe input:focus {
+                outline: none; }
+            html body .right-panel .myNote .addNote form .adiv-title input.input-describe, html body .right-panel .myNote .addNote form .adiv-describe input.input-describe {
+              font-size: 1em; }
+          html body .right-panel .myNote .addNote form .adiv-content textarea {
+            height: 150px;
+            resize: vertical;
+            border: 1px solid #e6e6e6;
+            border-radius: 2px;
+            font-size: 1.1em;
+            width: 97%; }
+          html body .right-panel .myNote .addNote form .adiv-class {
+            height: 2em;
+            width: 100%;
+            display: flex; }
+            html body .right-panel .myNote .addNote form .adiv-class label {
+              cursor: pointer;
+              display: flex;
+              justify-content: center;
+              align-items: center; }
+              html body .right-panel .myNote .addNote form .adiv-class label input {
+                width: 14px;
+                height: 14px;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                border: 1px solid #50abcd;
+                border-radius: 3px;
+                transition: all .2s ease;
+                outline: none;
+                opacity: 0.8; }
+                html body .right-panel .myNote .addNote form .adiv-class label input:checked {
+                  background: #50abcd;
+                  padding: 3px;
+                  background-clip: content-box; }
+              html body .right-panel .myNote .addNote form .adiv-class label span {
+                margin-left: 0.5em;
+                margin-right: 1em; }
+          html body .right-panel .myNote .addNote form .adiv-button button {
             cursor: pointer;
-            display: flex;
-            justify-content: center;
-            align-items: center; }
-            html body .right-panel .myNote .addNote form .adiv-class label input {
-              width: 14px;
-              height: 14px;
-              -webkit-appearance: none;
-              -moz-appearance: none;
-              border: 1px solid #50abcd;
-              border-radius: 3px;
-              transition: all .2s ease;
-              outline: none;
-              opacity: 0.8; }
-              html body .right-panel .myNote .addNote form .adiv-class label input:checked {
-                background: #50abcd;
-                padding: 3px;
-                background-clip: content-box; }
-            html body .right-panel .myNote .addNote form .adiv-class label span {
-              margin-left: 0.5em;
-              margin-right: 1em; }
-        html body .right-panel .myNote .addNote form .adiv-button button {
-          cursor: pointer;
-          width: 100%;
-          height: 33px;
-          background: #50abcd;
-          border: 1px solid #e6e6e6;
-          border-radius: 3px;
-          font-size: 1em;
-          color: white; } }
+            width: 100%;
+            height: 33px;
+            background: #50abcd;
+            border: 1px solid #e6e6e6;
+            border-radius: 3px;
+            font-size: 1em;
+            color: white; } }
 @media all and (max-width: 768px) and (min-width: 501px) {
   html body .left-panel {
     width: 100%;
