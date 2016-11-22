@@ -68,49 +68,22 @@ html {
     html body .right-panel {
       margin-left: 33.3%;
       width: 66.6%;
-      height: 100%;
+      min-height: 100%;
       margin-top: 0 !important;
-      position: relative; }
+      position: relative;
+      background-color: #fafbff; }
       html body .right-panel #upload-label {
         position: absolute;
         left: 15px;
         bottom: 15px; }
-        html body .right-panel #upload-label span {
-          font-size: 16px;
-          background: #f1f1f1;
-          border-radius: 3px; }
-      html body .right-panel .noteBook {
-        background-image: url("../images/wood.jpg");
-        height: 100%;
-        margin-top: 0 !important;
-        position: relative;
-        display: none; }
-        html body .right-panel .noteBook .title {
-          font-family: opensans-regular;
-          font-size: 3.5em;
-          position: absolute;
-          top: 8%;
-          left: 8%; }
-        html body .right-panel .noteBook .book-wrapper {
-          position: absolute;
-          top: 20%;
-          width: 100%;
-          height: 70%;
-          display: flex;
-          justify-content: center;
-          align-items: center; }
-          html body .right-panel .noteBook .book-wrapper .bb-bookblock {
-            width: 65%;
-            height: 80%;
-            margin: 0 15px; }
-            html body .right-panel .noteBook .book-wrapper .bb-bookblock .bb-item {
-              height: 100%;
-              width: 100%;
-              background-image: url("../images/book.png");
-              background-size: cover;
-              align-items: center;
-              justify-content: center;
-              background-color: transparent; }
+        html body .right-panel #upload-label i {
+          font-size: 1.2rem;
+          color: #50abcd;
+          opacity: 0.7;
+          cursor: pointer;
+          transition: all .2s ease; }
+          html body .right-panel #upload-label i:hover {
+            opacity: 1; }
       html body .right-panel .myNote {
         padding: 3em;
         width: 100%;
@@ -220,6 +193,20 @@ html {
           width: 25rem; }
           html body .right-panel .myNote p.title:hover {
             font-size: 3.5rem; }
+        html body .right-panel .myNote .markdown > p {
+          margin: 10px 5px; }
+          html body .right-panel .myNote .markdown > p strong {
+            font-size: 2rem;
+            font-weight: 400;
+            color: #c7254e; }
+        html body .right-panel .myNote .markdown > ol {
+          margin: 10px 5px; }
+        html body .right-panel .myNote .markdown > blockquote {
+          margin-top: 10px; }
+        html body .right-panel .myNote .markdown > pre {
+          margin: 10px 5px; }
+        html body .right-panel .myNote .markdown > div {
+          margin: 15px 0; }
         html body .right-panel .myNote .article-wrapper {
           transition: all .5s ease-in-out;
           opacity: 1; }

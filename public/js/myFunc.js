@@ -125,6 +125,7 @@ function showMarkdown(type,data){
     if(type == "single"){
         var html = data.html;
         var $articleWrapper = $("#article-wrapper");
+        $articleWrapper.addClass("markdown");
         progressJs("#porgress").start();
         progressJs("#porgress").set(50);
         $articleWrapper.css("opacity",0);
@@ -137,6 +138,7 @@ function showMarkdown(type,data){
     }
     else if(type == "array"){
         var $articleWrapper = $("#article-wrapper");
+        $articleWrapper.addClass("markdown");
         progressJs("#porgress").start();
         $articleWrapper.css("opacity",0);
         progressJs("#porgress").set(50);
@@ -310,6 +312,7 @@ function showNotes(data){
     var $articleWrapper = $("#article-wrapper");
     progressJs("#porgress").start();
     $articleWrapper.css("opacity",0);
+    $articleWrapper.removeClass("markdown");
     setTimeout(function(){
         $articleWrapper.empty();
         for(var i = 0; i < data.length; i++){

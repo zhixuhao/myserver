@@ -1,3 +1,4 @@
-server.js
-/jsondata/
-/public/uploads/
+
+/jsondata/*
+/public/uploads/*
+/node_modules/*

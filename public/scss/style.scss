@@ -5,6 +5,7 @@ $font-black:#333;
 $font-normal:#555;
 $font-light:#888;
 $theme-blue:#50abcd;
+$theme-red:#c7254e;
 @font-face {font-family: 'opensans-light';
   src: url('../font/OpenSans-Light.eot'); /* IE9*/
   src: url('../font/OpenSans-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -90,53 +91,22 @@ html{
     .right-panel{
       margin-left: 33.3%;
       width: 66.6%;
-      height: 100%;
+      min-height: 100%;
       margin-top: 0 !important;
       position: relative;
+      background-color: $bg-color;
       #upload-label{
         position: absolute;
         left:15px;
         bottom: 15px;
-        span{
-          font-size: 16px;
-          background: #f1f1f1;
-          border-radius: 3px;
-        }
-      }
-      .noteBook{
-        background-image: url('../images/wood.jpg');
-        height: 100%;
-        margin-top: 0 !important;
-        position: relative;
-        display: none;
-        .title{
-          font-family: opensans-regular;
-          font-size: 3.5em;
-          position: absolute;
-          top:8%;
-          left:8%;
-        }
-        .book-wrapper{
-          position: absolute;
-          top:20%;
-          width: 100%;
-          height: 70%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          .bb-bookblock{
-            width: 65%;
-            height: 80%;
-            margin: 0 15px;
-            .bb-item{
-              height: 100%;
-              width: 100%;
-              background-image: url('../images/book.png');
-              background-size: cover;
-              align-items: center;
-              justify-content: center;
-              background-color: transparent;
-            }
+        i{
+          font-size: 1.2rem;
+          color: $theme-blue;
+          opacity: 0.7;
+          cursor: pointer;
+          transition: all .2s ease;
+          &:hover{
+            opacity: 1;
           }
         }
       }
@@ -277,6 +247,28 @@ html{
           width: 25rem;
           &:hover{
             font-size: 3.5rem;
+          }
+        }
+        .markdown{
+          >p{
+            margin:10px 5px;
+            strong{
+              font-size: 2rem;
+              font-weight: 400;
+              color: $theme-red;
+            }
+          }
+          >ol{
+            margin:10px 5px;
+          }
+          >blockquote{
+            margin-top:10px
+          }
+          >pre{
+            margin:10px 5px;
+          }
+          >div{
+            margin:15px 0;
           }
         }
         .article-wrapper{
