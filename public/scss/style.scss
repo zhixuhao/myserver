@@ -446,6 +446,7 @@ html{
       .right-panel{
         width: 100%;
         margin-left: 0;
+        min-height: 80%;
         .myNote{
           p.title{
             transition: none;
@@ -457,11 +458,119 @@ html{
             }
           }
           .addNote{
-            width: 70%;
-            right:-62%;
+            width: 100%;
+            height: 70%;
+            bottom:-70%;
+            right: -8px;
+            position: fixed;
+            top:initial;
+            -webkit-transition: all .5s ease-in;
+            -moz-transition: all .5s ease-in;
+            transition: all .5s ease-in;
+            z-index: 1000;
+            //background-color: #fdfdfd;
+            &.active{
+              bottom:0;
+              right: -8px;
+              .icon{
+                i{
+                  transform: rotate(45deg);
+                }
+              }
+            }
             .icon{
-              bottom:22px;
-              top:initial;
+              position: absolute;
+              top:-40px;
+              right:20px;
+              i{
+                position: absolute;
+                right:0px;
+              }
+            }
+            form{
+              width: 100%;
+              margin-left: 0;
+              font-size: 1.5rem;
+              background-color: $bg-color;
+              .simditor-body{
+                min-height: 100px;
+                max-height:150px;
+                overflow: auto;
+              }
+              >div{
+                width: 95%;
+                margin-bottom: 1em;
+              }
+              .adiv-title,.adiv-describe{
+                height:2em;
+                input{
+                  height: 100%;
+                  width: 95%;
+                  border:none;
+                  background: transparent;
+                  font-size: 1.25em;
+                  &:focus{
+                    outline: none;
+                  }
+                }
+                input.input-describe{
+                  font-size: 1em;
+                }
+              }
+              .adiv-content{
+                textarea{
+                  height: 150px;
+                  resize: vertical;
+                  border:1px solid $border;
+                  border-radius: 2px;
+                  font-size: 1.1em;
+                  width: 97%;
+                }
+
+              }
+              .adiv-class{
+                height: 2em;
+                width: 100%;
+                display: flex;
+                label{
+                  cursor:pointer;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  input{
+                    width:14px;
+                    height:14px;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    border:1px solid $theme-blue;
+                    border-radius: 3px;
+                    transition:all .2s ease;
+                    outline:none;
+                    opacity: 0.8;
+                    &:checked{
+                      background: $theme-blue;
+                      padding: 3px;
+                      background-clip: content-box;
+                    }
+                  }
+                  span{
+                    margin-left: 0.5em;
+                    margin-right: 1em;
+                  }
+                }
+              }
+              .adiv-button{
+                button{
+                  cursor: pointer;
+                  width: 100%;
+                  height: 33px;
+                  background: $theme-blue;
+                  border:1px solid $border;
+                  border-radius: 3px;
+                  font-size: 1em;
+                  color:white;
+                }
+              }
             }
           }
         }
