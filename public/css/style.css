@@ -337,8 +337,7 @@ html {
     margin-left: 0;
     min-height: 80%; }
     html body .right-panel .myNote {
-      padding-top: 1.5em;
-      padding: 1em; }
+      padding: 1.5em; }
       html body .right-panel .myNote p.title {
         transition: none; }
         html body .right-panel .myNote p.title:hover {

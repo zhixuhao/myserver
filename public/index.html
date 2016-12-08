@@ -193,22 +193,27 @@
 	<script type="text/javascript" src="vender/simditor/simditor.js"></script>
 	<script type="text/javascript" src="vender/bootstrap/dist/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/myFunc.js"></script>
+	<script type="text/javascript" src="js/myFunc1.js"></script>
 	<script>
 		var type ="{{type}}";
 
 		$(document).ready(function(){
-			initSimditor();
-			mobile_click();
-			initUploadFile();
+			//initSimditor();
+			//mobile_click();
+			//initUploadFile();
+			var zhi = new zxh();
+			zhi.initSimditor();
+			zhi.mobile_click();
+			zhi.initUploadFile();
 			switch(type){
 				case "alltype":
-					getAllType();
+					zhi.getAllType();
 					break;
 				case "notes":
-					getAllNotes();
+					zhi.getAllNotes();
 					break;
 				case "markdown":
-					getMarkdown();
+					zhi.getMarkdown();
 					break;
 				default:
 					break;
