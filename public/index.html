@@ -193,7 +193,7 @@
 	<script type="text/javascript" src="vender/simditor/simditor.js"></script>
 	<script type="text/javascript" src="vender/bootstrap/dist/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/myFunc.js"></script>
-	<script type="text/javascript" src="js/myFunc1.js"></script>
+	<script type="text/javascript" src="js/bundle.js"></script>
 	<script>
 		var type ="{{type}}";
 
@@ -205,6 +205,7 @@
 			zhi.initSimditor();
 			zhi.mobile_click();
 			zhi.initUploadFile();
+			console.log(zhi.mymodule);
 			switch(type){
 				case "alltype":
 					zhi.getAllType();

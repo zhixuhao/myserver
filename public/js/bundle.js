@@ -1,3 +1,31 @@
+(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+/**
+ * Created by zhixuhao on 12/8/16.
+ */
+
+function myModule(name,type,time){
+    this.name = name;
+    this.type = type;
+    this.time = time;
+}
+
+myModule.prototype = {
+  init:function(){
+      var $html = $("<div>").html("name:"+this.name + "type:"+this.type+"time:"+time);
+      return $html;
+  },
+    getname:function(){
+        return this.name;
+    },
+    gettime:function(){
+        return this.time;
+    }
+};
+
+module.exports = function(name,type,time){
+    return new myModule(name,type,time);
+};
+},{}],2:[function(require,module,exports){
 /**
  * Created by zhixuhao on 12/7/16.
  */
@@ -6,7 +34,7 @@
     function zxh(){
         this.author = "zhixuhao";
         this.createTime = "20161207";
-        this.mymodule = zmodule("zhixuhao","try",1211);
+        this.mymodule = zmodule("zhixuhao","try",1208);
     }
 
     zxh.prototype = {
@@ -282,3 +310,4 @@
 
     window.zxh = zxh;
 })(window);
+},{"./Note.js":1}]},{},[2]);
